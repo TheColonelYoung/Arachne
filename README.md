@@ -23,7 +23,7 @@ Center point is not used for calculation of motion, is used only as center point
 Every point is represented as vector [x,y,z,1].
 
 ### Travel distance
-Distance between point on lower and upper bases is calculated.
+Distance between connect points  of actuator on lower and upper bases is calculated.
 - Calculation is based on usage of euclidian distance calculation in three dimensional space
 - $d(a,b) = \sqrt{(a_x - b_x)^2 + (a_y - b_y)^2 + (a_z - b_z)^2}$
 
@@ -50,13 +50,31 @@ Posible homing sequence is that all actuators will be moved with same speed to t
 This example is calculated only for one actuators, others have same calculations.
 Platform is now at home position. So position of points describes offset from zero point.
 Length of all actuator is same. Probably zero length of pushrod + length of body.
-In this example is body length two times retractable length. Minimal length 200mm, maximal length is 300mm.
+In this example is body length two times retractable length. Minimal length 30mm, maximal length is 50mm.
+Length is calculated between mates conecting base and actuator.
 
-Point (P) is at [-2,0,0,1], motions are shift forward (Y+2), and rotation to right(Z+90°)
+Point on upper base ($P_{UP}$) is at `[-2, 0, 0, 1]`, motions are shift forward (Y+2), and rotation to right(Z+90°)
+Point on lower base ($P_{LOW}$) is at `[-1, 2, -2.45, 1]`, Z offset is determinated by vertical distance between lower and upper base in home state
 
 **Shift matrix:**
 $\begin{bmatrix}1 & 0 & 0 & X \\0 & 1 & 0 & Y \\ 0 & 0 & 1 & Z \\ 0 & 0 & 0 & 1 \\\end{bmatrix}$
 
 **Rotation matrix around Z - Yaw($\gamma$):**
-$\begin{bmatrix}\cos(\gamma) & \sin(\gamma) & 0 & 0 \\-\sin(\gamma) & \cos(\gamma) & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix}$
+$\begin{bmatrix}\cos(\gamma) & -\sin(\gamma) & 0 & 0 \\\sin(\gamma) & \cos(\gamma) & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix}$
 
+**Multiplication of matrix**
+[Rotation * Translation * Point]
+$\begin{bmatrix}0 & -1 & 0 & 0 \\1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}-2 \\ 0 \\ 0 \\ 1 \\\end{bmatrix}$ = $\begin{bmatrix}-2 \\ -2 \\ 0 \\ 1 \\\end{bmatrix}$
+
+New coordinates of $P_{UP}$ are `[-2, -2, 0, 1]`
+
+Old distance between $P_{UP}$ and $P_{LOW}$ is: 3.317 cm
+- Calculation: $d = \sqrt{(-2 - -1)^2 + (0 - 2)^2 + (0 - -2.45)^2} = 3.317$
+
+New distance between $P_{UP}$ and $P_{LOW}$ is: 4.796 cm
+- Calculation: $d = \sqrt{(-2 - -1)^2 + (-2 - 2)^2 + (0 - -2.45)^2} = 4.796$
+
+Diference between old and new length of actuator is: 1.479 cm
+
+So actuator must change length to 4.796 cm, which is nearly maximal length (in this example).
+Change of length is + 1.479 cm, speed and acceleration depends on motion of other actuators.
