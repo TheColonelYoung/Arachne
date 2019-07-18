@@ -65,7 +65,7 @@ $\begin{bmatrix}\cos(\gamma) & -\sin(\gamma) & 0 & 0 \\\sin(\gamma) & \cos(\gamm
 **Multiplication of matrix**  
 Note: if platform is not home is necessary to make another translation of object from current position of center point to center of space. This is represented as empty translation-1 matrix  
 [Translation-1 * Rotation * Translation * Point]  
-$\begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}0 & -1 & 0 & 0 \\1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}-2 \\ 0 \\ 0 \\ 1 \\\end{bmatrix}$ = $\begin{bmatrix}-2 \\ -2 \\ 0 \\ 1 \\\end{bmatrix}$  
+<img src="http://www.sciweavers.org/tex2img.php?eq=%5Cbegin%7Bbmatrix%7D1%20%26%200%20%26%200%20%26%200%20%5C%5C0%20%26%201%20%26%200%20%26%200%20%5C%5C%200%20%26%200%20%26%201%20%26%200%20%5C%5C%200%20%26%200%20%26%200%20%26%201%20%5C%5C%5Cend%7Bbmatrix%7D%20%5Ctimes%20%5Cbegin%7Bbmatrix%7D0%20%26%20-1%20%26%200%20%26%200%20%5C%5C1%20%26%200%20%26%200%20%26%200%20%5C%5C%200%20%26%200%20%26%201%20%26%200%20%5C%5C%200%20%26%200%20%26%200%20%26%201%20%5C%5C%5Cend%7Bbmatrix%7D%20%5Ctimes%20%5Cbegin%7Bbmatrix%7D1%20%26%200%20%26%200%20%26%200%20%5C%5C0%20%26%201%20%26%200%20%26%202%20%5C%5C%200%20%26%200%20%26%201%20%26%200%20%5C%5C%200%20%26%200%20%26%200%20%26%201%20%5C%5C%5Cend%7Bbmatrix%7D%20%5Ctimes%20%5Cbegin%7Bbmatrix%7D-2%20%5C%5C%200%20%5C%5C%200%20%5C%5C%201%20%5C%5C%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D-2%20%5C%5C%20-2%20%5C%5C%200%20%5C%5C%201%20%5C%5C%20%5Cend%7Bbmatrix%7D&bc=White&fc=Black&im=png&fs=18&ff=arev&edit=0" align="center" border="0" alt="\begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}0 & -1 & 0 & 0 \\1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\\end{bmatrix} \times \begin{bmatrix}-2 \\ 0 \\ 0 \\ 1 \\\end{bmatrix} = \begin{bmatrix}-2 \\ -2 \\ 0 \\ 1 \\ \end{bmatrix}" width="798" height="129" />
 
 New coordinates of $P_{UP}$ are `[-2, -2, 0, 1]`  
 
@@ -80,4 +80,3 @@ Difference between old and new length of actuator is: 1.479 cm
 So actuator must change length to 4.796 cm, which is nearly maximal length (in this example).  
 Change of length is + 1.479 cm, speed and acceleration depends on motion of other actuators.  
 
-![](https://chart.apis.google.com/chart?cht=tx&chl=P_{UP})
