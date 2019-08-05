@@ -79,3 +79,13 @@ Difference between old and new length of actuator is: 1.479 cm
 
 So actuator must change length to 4.796 cm, which is nearly maximal length (in this example).  
 Change of length is + 1.479 cm, speed and acceleration depends on motion of other actuators.  
+
+# PCB
+Main Motherboard contains six stepper motor drivers L6470 in TSSOP28 package.
+PCB is designed with maximal dimensions of 10x10cm, so it can be cheaply manufactured. 
+
+### Specifications
+- maximal input voltage is 36V
+- PCB is designed for maximal current of 8A into motor, this assumes 6x1.2A stepper motors
+- No endstops are required, MCU use stepper motor stall detection
+- Stepper drivers are in line, so heatsink can be fit on them
