@@ -1,6 +1,8 @@
 # Project Arachne  
 Mainly 3D printed manipulator with 6 axis of freedom based on design of steward platform  
 
+![](Arachne.png)
+
 **!!! Now the notes in this repository are rather assumptions that will need to be verified in practice !!!**  
 
 Platform is based on two nearly triangular bases connected with 6 linear actuators.  
