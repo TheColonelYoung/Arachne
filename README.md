@@ -9,7 +9,7 @@ Lower base is stationary, upper base part is movable.
 Motherboard is positioned in lower triangle base. Motherboard communicates with controller (pc) via serial line with G-code.  
 First version of platform is 3D printed. Next version are supposed to be from aluminium.  
 
-# Motion system  
+# **Motion system**  
 Motion system is based on [affine transformation](https://en.wikipedia.org/wiki/Affine_transformation).  
 Basic system contains from seven points. Which are placed in center of platform and in points of connection with actuators.  
 Points are on both triangular bases. Corresponding points have same numbers.  
@@ -80,12 +80,23 @@ Difference between old and new length of actuator is: 1.479 cm
 So actuator must change length to 4.796 cm, which is nearly maximal length (in this example).  
 Change of length is + 1.479 cm, speed and acceleration depends on motion of other actuators.  
 
-# PCB
-Main Motherboard contains six stepper motor drivers L6470 in TSSOP28 package.
-PCB is designed with maximal dimensions of 10x10cm, so it can be cheaply manufactured. 
+# **Construction**  
 
-### Specifications
-- maximal input voltage is 36V
-- PCB is designed for maximal current of 8A into motor, this assumes 6x1.2A stepper motors
-- No endstops are required, MCU use stepper motor stall detection
-- Stepper drivers are in line, so heatsink can be fit on them
+### Joints  
+Linear actuators are connected with hexagonal platform with universal joint with can give joint freedom to move freely. Rotation of joint should not be constrained by joint but by length of arm (linear actuator length).  
+
+Joints consists of 3 parts. Two forks and one central block. X and Y axis of forks are perpendicular between forks (forks are turned against self by 90° on Z axis). Fork is connected to central block through small ball bearing. This ball bearing removed as much of friction as possible.  
+
+
+![Universal joint](img/universal_joint.png)  
+**Universal joint**  
+
+# **PCB**  
+Main Motherboard contains six stepper motor drivers L6470 in TSSOP28 package.  
+PCB is designed with maximal dimensions of 10x10cm, so it can be cheaply manufactured.  
+
+### Specifications  
+- maximal input voltage is 36V  
+- PCB is designed for maximal current of 8A into motor, this assumes 6x1.2A stepper motors  
+- No endstops are required, MCU use stepper motor stall detection  
+- Stepper drivers are in line, so heatsink can be fit on them  
