@@ -650,51 +650,16 @@ F 3 "" H 8850 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
-U 1 1 5CE09E51
-P 9650 5500
-F 0 "R?" H 9750 5550 50  0000 L CNN
-F 1 "10k" H 9750 5450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9580 5500 50  0001 C CNN
-F 3 "~" H 9650 5500 50  0001 C CNN
-	1    9650 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5CE09E5B
-P 9650 6000
-F 0 "R?" H 9750 6050 50  0000 L CNN
-F 1 "10k" H 9750 5950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9580 6000 50  0001 C CNN
-F 3 "~" H 9650 6000 50  0001 C CNN
-	1    9650 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5CE09E69
-P 9650 6150
-F 0 "#PWR?" H 9650 5900 50  0001 C CNN
-F 1 "GND" H 9650 6000 50  0000 C CNN
-F 2 "" H 9650 6150 50  0001 C CNN
-F 3 "" H 9650 6150 50  0001 C CNN
-	1    9650 6150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR?
 U 1 1 5CE30936
-P 9900 5350
-F 0 "#PWR?" H 9900 5200 50  0001 C CNN
-F 1 "+3.3V" V 9900 5500 50  0000 L CNN
-F 2 "" H 9900 5350 50  0001 C CNN
-F 3 "" H 9900 5350 50  0001 C CNN
-	1    9900 5350
+P 9600 5350
+F 0 "#PWR?" H 9600 5200 50  0001 C CNN
+F 1 "+3.3V" V 9600 5500 50  0000 L CNN
+F 2 "" H 9600 5350 50  0001 C CNN
+F 3 "" H 9600 5350 50  0001 C CNN
+	1    9600 5350
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9650 5350 9900 5350
 $Comp
 L Device:R R?
 U 1 1 5CE5A6FB
@@ -733,9 +698,6 @@ Wire Wire Line
 Connection ~ 9650 3500
 Wire Wire Line
 	9650 3500 9900 3500
-Wire Wire Line
-	9650 5350 9400 5350
-Connection ~ 9650 5350
 Connection ~ 9400 5350
 Wire Wire Line
 	6250 1375 6550 1375
@@ -771,16 +733,14 @@ Wire Wire Line
 $Comp
 L Connector:TestPoint TP?
 U 1 1 5CFEFE42
-P 9650 5250
-F 0 "TP?" H 9750 5400 50  0000 L CNN
-F 1 "3V3" H 9750 5300 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9850 5250 50  0001 C CNN
-F 3 "~" H 9850 5250 50  0001 C CNN
-	1    9650 5250
+P 9400 5275
+F 0 "TP?" H 9500 5425 50  0000 L CNN
+F 1 "3V3" H 9500 5325 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9600 5275 50  0001 C CNN
+F 3 "~" H 9600 5275 50  0001 C CNN
+	1    9400 5275
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9650 5250 9650 5350
 Wire Wire Line
 	5100 4200 5300 4200
 Wire Wire Line
@@ -922,42 +882,6 @@ Connection ~ 9100 1450
 Wire Wire Line
 	9200 1300 8450 1300
 Connection ~ 9200 1300
-Wire Wire Line
-	9650 5650 9650 5750
-$Comp
-L Device:C C?
-U 1 1 5D11DA30
-P 10050 6000
-F 0 "C?" H 10165 6046 50  0000 L CNN
-F 1 "100nF" H 10165 5955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10088 5850 50  0001 C CNN
-F 3 "~" H 10050 6000 50  0001 C CNN
-	1    10050 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5D11DA3A
-P 10050 6150
-F 0 "#PWR?" H 10050 5900 50  0001 C CNN
-F 1 "GND" H 10050 6000 50  0000 C CNN
-F 2 "" H 10050 6150 50  0001 C CNN
-F 3 "" H 10050 6150 50  0001 C CNN
-	1    10050 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9650 5750 10050 5750
-Connection ~ 10050 5750
-Text Label 10450 5750 2    50   ~ 0
-3V3_MON
-Wire Wire Line
-	10050 5750 10450 5750
-Wire Wire Line
-	10050 5750 10050 5850
-Connection ~ 9650 5750
-Wire Wire Line
-	9650 5750 9650 5850
 Text Label 8450 1300 0    50   ~ 0
 3V3_MON
 Text Label 8450 1450 0    50   ~ 0
@@ -1303,4 +1227,10 @@ Wire Wire Line
 	4725 1850 4725 1900
 Wire Wire Line
 	4325 1850 4725 1850
+Wire Wire Line
+	9400 5275 9400 5350
+Wire Wire Line
+	9400 5350 9600 5350
+Text Notes 9725 5775 0    50   ~ 0
+3.3V rail is monitored\n via internal voltage\n reference in MCU
 $EndSCHEMATC

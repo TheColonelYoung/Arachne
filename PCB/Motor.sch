@@ -1798,4 +1798,10 @@ Text Label 6000 4800 0    50   ~ 0
 SW
 Wire Wire Line
 	6000 4800 6150 4800
+Wire Wire Line
+	4100 4800 4300 4800
+Connection ~ 4100 4800
+Wire Wire Line
+	4600 4800 4500 4800
+Connection ~ 4500 4800
 $EndSCHEMATC
