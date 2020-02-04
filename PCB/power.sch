@@ -752,8 +752,6 @@ Text GLabel 5150 3800 0    50   Input ~ 0
 USB_VCC
 Text HLabel 9450 1450 2    50   Input ~ 0
 5V_MON
-Text HLabel 9450 1300 2    50   Input ~ 0
-3V3_MON
 Text HLabel 9450 1750 2    50   Input ~ 0
 PWR_MON
 Wire Wire Line
@@ -873,17 +871,8 @@ Wire Wire Line
 Wire Wire Line
 	9100 1450 9450 1450
 Wire Wire Line
-	9200 1900 9200 1300
-Wire Wire Line
-	9200 1300 9450 1300
-Wire Wire Line
 	8450 1450 9100 1450
 Connection ~ 9100 1450
-Wire Wire Line
-	9200 1300 8450 1300
-Connection ~ 9200 1300
-Text Label 8450 1300 0    50   ~ 0
-3V3_MON
 Text Label 8450 1450 0    50   ~ 0
 5V_MON
 $Comp

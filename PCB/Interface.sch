@@ -390,8 +390,6 @@ F 3 "" H 8150 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8150 2250 7875 2250
-Text Notes 6375 2625 0    79   ~ 0
-POWER\nSTAT\nDBG_RX\nDBG_TX
 Text HLabel 8150 2350 2    79   Input ~ 0
 STAT
 Wire Wire Line
@@ -400,4 +398,6 @@ Text Label 3575 1900 0    50   ~ 0
 D+
 Text Label 3575 2900 0    50   ~ 0
 D-
+Text Notes 6375 2625 0    79   ~ 0
+POWER\nSTAT\nDBG_RX\nDBG_TX
 $EndSCHEMATC

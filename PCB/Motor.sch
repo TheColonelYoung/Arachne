@@ -1286,7 +1286,7 @@ F 3 "" H 6350 2300 50  0001 C CNN
 $EndComp
 Connection ~ 6350 2000
 $Comp
-L Arachne-rescue:C-Device-Motherboard-rescue C?
+L Device:C C?
 U 1 1 5D3586AB
 P 6350 2150
 AR Path="/5C6B1C46/5D3586AB" Ref="C?"  Part="1" 
