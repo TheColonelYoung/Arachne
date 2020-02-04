@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name Arachne-rescue)(type Legacy)(uri ${KIPRJMOD}/Arachne-rescue.lib)(options "")(descr ""))
+  (lib (name vrasseo-rescue)(type Legacy)(uri /home/petr/work/vrasseo/PCB/Motherboard/vrasseo-rescue.lib)(options "")(descr ""))
 )

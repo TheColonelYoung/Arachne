@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:Arachne-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 9
 Title "Arachne"
 Date "2019-07-16"
 Rev "0.1"
@@ -14,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L MCU_ST_STM32L4:STM32L432KCUx U?
-U 1 1 5D2F0D32
-P 5750 2600
-F 0 "U?" H 5750 3681 50  0000 C CNN
-F 1 "STM32L432KCUx" H 5750 3590 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 5350 1700 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00257205.pdf" H 5750 2600 50  0001 C CNN
-	1    5750 2600
-	1    0    0    -1  
-$EndComp
 $Sheet
 S 9150 700  1650 750 
 U 5D3521E4
@@ -36,12 +24,6 @@ F4 "CS" I L 9150 1350 50
 F5 "SCK" I L 9150 1250 50 
 F6 "MOSI" I L 9150 1150 50 
 F7 "MISO" I L 9150 1050 50 
-$EndSheet
-$Sheet
-S 1050 1400 1700 1300
-U 5D436602
-F0 "Power" 50
-F1 "power.sch" 50
 $EndSheet
 $Sheet
 S 9150 1650 1650 750 
@@ -181,4 +163,28 @@ Wire Wire Line
 Wire Wire Line
 	8850 1050 9150 1050
 Connection ~ 8850 2000
+$Sheet
+S 850  875  1700 1300
+U 5D436602
+F0 "Power" 50
+F1 "power.sch" 50
+F2 "5V_MON" I R 2550 1025 50 
+F3 "3V3_MON" I R 2550 1175 50 
+F4 "PWR_MON" I R 2550 1325 50 
+F5 "I_MON" I R 2550 1475 50 
+$EndSheet
+$Sheet
+S 850  3075 1700 1225
+U 5E43C48F
+F0 "Interface" 50
+F1 "Interface.sch" 50
+F2 "USB_D+" I R 2550 3200 50 
+F3 "USB_D-" I R 2550 3300 50 
+F4 "RESET" I R 2550 3500 50 
+F5 "SWDIO" I R 2550 3650 50 
+F6 "SWCLK" I R 2550 3750 50 
+F7 "DBG_RX" I R 2550 3925 50 
+F8 "DBG_TX" I R 2550 4025 50 
+F9 "STAT" I R 2550 4200 50 
+$EndSheet
 $EndSCHEMATC
