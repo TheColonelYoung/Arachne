@@ -1,4 +1,4 @@
-update=Út 4. února 2020, 21:53:34 CET
+update=St 5. února 2020, 13:42:44 CET
 version=1
 last_client=kicad
 [general]
@@ -24,7 +24,7 @@ LabSize=50
 ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
-PageLayoutDescrFile=
+PageLayoutDescrFile=page_layout.kicad_wks
 LastNetListRead=Arachne.net
 CopperLayerCount=2
 BoardThickness=1.6
@@ -67,7 +67,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.051
 SolderMaskMinWidth=0.25
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
