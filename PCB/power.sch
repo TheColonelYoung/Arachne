@@ -826,10 +826,6 @@ Wire Wire Line
 Wire Wire Line
 	8900 1750 8450 1750
 Connection ~ 8900 1750
-Text Label 7450 1775 2    50   ~ 0
-MAIN_V_MON
-Text Label 8450 1750 0    50   ~ 0
-PWR_MON
 $Comp
 L Device:C C808
 U 1 1 5D0D94FC
@@ -1013,8 +1009,6 @@ $EndComp
 Wire Wire Line
 	3700 1500 4000 1500
 Wire Wire Line
-	2750 3950 2750 4000
-Wire Wire Line
 	8450 1150 9300 1150
 Wire Wire Line
 	9300 1900 9300 1150
@@ -1078,18 +1072,18 @@ $EndComp
 Text GLabel 7025 975  2    50   Input ~ 0
 VMOT
 Wire Wire Line
-	6725 975  7025 975 
+	6725 975  6925 975 
 Wire Wire Line
 	6950 1775 7450 1775
 $Comp
 L power:+24V #PWR0818
 U 1 1 5D4903EF
-P 2750 3950
-F 0 "#PWR0818" H 2750 3800 50  0001 C CNN
-F 1 "+24V" H 2765 4123 50  0000 C CNN
-F 2 "" H 2750 3950 50  0001 C CNN
-F 3 "" H 2750 3950 50  0001 C CNN
-	1    2750 3950
+P 2750 4000
+F 0 "#PWR0818" H 2750 3850 50  0001 C CNN
+F 1 "+24V" H 2765 4173 50  0000 C CNN
+F 2 "" H 2750 4000 50  0001 C CNN
+F 3 "" H 2750 4000 50  0001 C CNN
+	1    2750 4000
 	1    0    0    -1  
 $EndComp
 Text Label 5800 1375 0    50   ~ 0
@@ -1115,7 +1109,7 @@ Wire Wire Line
 	6250 975  6425 975 
 Text Notes 6150 2525 0    50   ~ 0
 Main voltage monitoring
-Text Notes 6900 850  0    50   ~ 0
+Text Notes 6450 650  0    50   ~ 0
 Motor power supply
 Text Notes 3700 2500 0    50   ~ 0
 Current measuring
@@ -1222,4 +1216,35 @@ Wire Wire Line
 	9400 5350 9600 5350
 Text Notes 9725 5775 0    50   ~ 0
 3.3V rail is monitored\n via internal voltage\n reference in MCU
+Text Label 8450 1750 0    50   ~ 0
+PWR_MON
+Text Label 7450 1775 2    50   ~ 0
+PWR_MON
+$Comp
+L power:PWR_FLAG #FLG0107
+U 1 1 5E41C5DC
+P 6925 975
+F 0 "#FLG0107" H 6925 1050 50  0001 C CNN
+F 1 "PWR_FLAG" H 7050 1125 50  0000 C CNN
+F 2 "" H 6925 975 50  0001 C CNN
+F 3 "~" H 6925 975 50  0001 C CNN
+	1    6925 975 
+	1    0    0    -1  
+$EndComp
+Connection ~ 6925 975 
+Wire Wire Line
+	6925 975  7025 975 
+NoConn ~ 9000 1900
+NoConn ~ 9200 1900
+$Comp
+L power:PWR_FLAG #FLG0109
+U 1 1 5E439F29
+P 6550 1375
+F 0 "#FLG0109" H 6550 1450 50  0001 C CNN
+F 1 "PWR_FLAG" H 6550 1550 50  0000 C CNN
+F 2 "" H 6550 1375 50  0001 C CNN
+F 3 "~" H 6550 1375 50  0001 C CNN
+	1    6550 1375
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

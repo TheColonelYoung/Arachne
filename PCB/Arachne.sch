@@ -201,8 +201,6 @@ Wire Wire Line
 Wire Wire Line
 	6750 3775 6200 3775
 Wire Wire Line
-	6200 3375 6750 3375
-Wire Wire Line
 	6200 3275 6750 3275
 Text Label 6750 4575 2    50   ~ 0
 SWDIO
@@ -215,8 +213,6 @@ USB_D-
 NoConn ~ 5400 2075
 Text Label 6750 3275 2    50   ~ 0
 5V_MON
-Text Label 6750 3375 2    50   ~ 0
-1V8_MON
 Text Label 4500 3075 0    50   ~ 0
 STAT
 Wire Wire Line
@@ -457,40 +453,40 @@ RGB_STAT
 $Comp
 L Device:R R?
 U 1 1 5E45EF80
-P 6150 6500
+P 2475 7275
 AR Path="/5E44BE52/5E45EF80" Ref="R?"  Part="1" 
 AR Path="/5E45EF80" Ref="R104"  Part="1" 
-F 0 "R104" H 6220 6546 50  0000 L CNN
-F 1 "10k" H 6220 6455 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6080 6500 50  0001 C CNN
-F 3 "~" H 6150 6500 50  0001 C CNN
-	1    6150 6500
+F 0 "R104" H 2545 7321 50  0000 L CNN
+F 1 "10k" H 2545 7230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2405 7275 50  0001 C CNN
+F 3 "~" H 2475 7275 50  0001 C CNN
+	1    2475 7275
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E45EF86
-P 6150 6650
+P 2475 7425
 AR Path="/5E44BE52/5E45EF86" Ref="#PWR?"  Part="1" 
 AR Path="/5E45EF86" Ref="#PWR0113"  Part="1" 
-F 0 "#PWR0113" H 6150 6400 50  0001 C CNN
-F 1 "GND" H 6155 6477 50  0000 C CNN
-F 2 "" H 6150 6650 50  0001 C CNN
-F 3 "" H 6150 6650 50  0001 C CNN
-	1    6150 6650
+F 0 "#PWR0113" H 2475 7175 50  0001 C CNN
+F 1 "GND" H 2480 7252 50  0000 C CNN
+F 2 "" H 2475 7425 50  0001 C CNN
+F 3 "" H 2475 7425 50  0001 C CNN
+	1    2475 7425
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E45EF8C
-P 5950 6650
+P 2275 7425
 AR Path="/5E44BE52/5E45EF8C" Ref="#PWR?"  Part="1" 
 AR Path="/5E45EF8C" Ref="#PWR0112"  Part="1" 
-F 0 "#PWR0112" H 5950 6400 50  0001 C CNN
-F 1 "GND" H 5955 6477 50  0000 C CNN
-F 2 "" H 5950 6650 50  0001 C CNN
-F 3 "" H 5950 6650 50  0001 C CNN
-	1    5950 6650
+F 0 "#PWR0112" H 2275 7175 50  0001 C CNN
+F 1 "GND" H 2280 7252 50  0000 C CNN
+F 2 "" H 2275 7425 50  0001 C CNN
+F 3 "" H 2275 7425 50  0001 C CNN
+	1    2275 7425
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -623,63 +619,63 @@ F 3 "" H 5175 7450 50  0001 C CNN
 	1    5175 7450
 	1    0    0    -1  
 $EndComp
-Text Notes 5550 7100 0    79   ~ 0
+Text Notes 5350 7050 0    99   ~ 20
 Mounting holes
 $Comp
 L Device:C C?
 U 1 1 5E45EFCF
-P 5950 6500
+P 2275 7275
 AR Path="/5E44BE52/5E45EFCF" Ref="C?"  Part="1" 
 AR Path="/5E45EFCF" Ref="C108"  Part="1" 
-F 0 "C108" H 5600 6550 50  0000 L CNN
-F 1 "100nF" H 5600 6450 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5988 6350 50  0001 C CNN
-F 3 "~" H 5950 6500 50  0001 C CNN
-	1    5950 6500
+F 0 "C108" H 1925 7325 50  0000 L CNN
+F 1 "100nF" H 1925 7225 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2313 7125 50  0001 C CNN
+F 3 "~" H 2275 7275 50  0001 C CNN
+	1    2275 7275
 	1    0    0    -1  
 $EndComp
-Text Label 6950 6250 2    50   ~ 0
+Text Label 3275 7025 2    50   ~ 0
 RESET
 Wire Wire Line
-	6700 6250 6950 6250
+	3025 7025 3275 7025
 Wire Wire Line
-	6150 6150 6150 6250
+	2475 6925 2475 7025
 Wire Wire Line
-	5950 6250 5950 6350
+	2275 7025 2275 7125
 Wire Wire Line
-	6150 6250 5950 6250
+	2475 7025 2275 7025
 Wire Wire Line
-	6150 6250 6150 6350
+	2475 7025 2475 7125
 Wire Wire Line
-	6300 6250 6150 6250
+	2625 7025 2475 7025
 $Comp
 L Device:R R?
 U 1 1 5E45EFDC
-P 6150 6000
+P 2475 6775
 AR Path="/5E44BE52/5E45EFDC" Ref="R?"  Part="1" 
 AR Path="/5E45EFDC" Ref="R103"  Part="1" 
-F 0 "R103" H 5900 6050 50  0000 L CNN
-F 1 "100k" H 5900 5950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6080 6000 50  0001 C CNN
-F 3 "~" H 6150 6000 50  0001 C CNN
-	1    6150 6000
+F 0 "R103" H 2225 6825 50  0000 L CNN
+F 1 "100k" H 2225 6725 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2405 6775 50  0001 C CNN
+F 3 "~" H 2475 6775 50  0001 C CNN
+	1    2475 6775
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW?
 U 1 1 5E45EFE2
-P 6500 6250
+P 2825 7025
 AR Path="/5E44BE52/5E45EFE2" Ref="SW?"  Part="1" 
 AR Path="/5E45EFE2" Ref="SW101"  Part="1" 
-F 0 "SW101" H 6500 6535 50  0000 C CNN
-F 1 "SW_Push" H 6500 6450 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 6500 6450 50  0001 C CNN
-F 3 "" H 6500 6450 50  0001 C CNN
-	1    6500 6250
+F 0 "SW101" H 2825 7310 50  0000 C CNN
+F 1 "SW_Push" H 2825 7225 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 2825 7225 50  0001 C CNN
+F 3 "" H 2825 7225 50  0001 C CNN
+	1    2825 7025
 	1    0    0    -1  
 $EndComp
-Connection ~ 6150 6250
-Text Notes 6000 5600 0    79   ~ 0
+Connection ~ 2475 7025
+Text Notes 2325 6375 0    99   ~ 20
 Reset
 $Comp
 L Mechanical:MountingHole_Pad H?
@@ -710,63 +706,63 @@ $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5E45EFF6
-P 6150 5850
+P 2475 6625
 AR Path="/5E44BE52/5E45EFF6" Ref="#PWR?"  Part="1" 
 AR Path="/5E45EFF6" Ref="#PWR0111"  Part="1" 
-F 0 "#PWR0111" H 6150 5700 50  0001 C CNN
-F 1 "+3.3V" H 6175 6050 50  0000 C CNN
-F 2 "" H 6150 5850 50  0001 C CNN
-F 3 "" H 6150 5850 50  0001 C CNN
-	1    6150 5850
+F 0 "#PWR0111" H 2475 6475 50  0001 C CNN
+F 1 "+3.3V" H 2500 6825 50  0000 C CNN
+F 2 "" H 2475 6625 50  0001 C CNN
+F 3 "" H 2475 6625 50  0001 C CNN
+	1    2475 6625
 	1    0    0    -1  
 $EndComp
 $Comp
 L Power_Protection:ESDA6V1-5SC6 D?
 U 1 1 5E4895FF
-P 1275 6475
+P 1250 7075
 AR Path="/5E44BE52/5E4895FF" Ref="D?"  Part="1" 
 AR Path="/5E4895FF" Ref="D114"  Part="1" 
-F 0 "D114" H 925 6325 50  0000 L CNN
-F 1 "ESDA6V1-5SC6" H 625 6250 50  0000 L CNN
-F 2 "Package_DFN_QFN:ST_UQFN-6L_1.5x1.7mm_Pitch0.5mm" H 1975 6225 50  0001 C CNN
-F 3 "www.st.com/resource/en/datasheet/esda6v1-5sc6.pdf" V 1275 6475 50  0001 C CNN
-	1    1275 6475
+F 0 "D114" H 900 6925 50  0000 L CNN
+F 1 "ESDA6V1-5SC6" H 600 6850 50  0000 L CNN
+F 2 "Package_DFN_QFN:ST_UQFN-6L_1.5x1.7mm_Pitch0.5mm" H 1950 6825 50  0001 C CNN
+F 3 "www.st.com/resource/en/datasheet/esda6v1-5sc6.pdf" V 1250 7075 50  0001 C CNN
+	1    1250 7075
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E489605
-P 1275 6675
+P 1250 7275
 AR Path="/5E44BE52/5E489605" Ref="#PWR?"  Part="1" 
 AR Path="/5E489605" Ref="#PWR0114"  Part="1" 
-F 0 "#PWR0114" H 1275 6425 50  0001 C CNN
-F 1 "GND" H 1275 6525 50  0000 C CNN
-F 2 "" H 1275 6675 50  0001 C CNN
-F 3 "" H 1275 6675 50  0001 C CNN
-	1    1275 6675
+F 0 "#PWR0114" H 1250 7025 50  0001 C CNN
+F 1 "GND" H 1250 7125 50  0000 C CNN
+F 2 "" H 1250 7275 50  0001 C CNN
+F 3 "" H 1250 7275 50  0001 C CNN
+	1    1250 7275
 	1    0    0    -1  
 $EndComp
-Text Label 1375 5875 3    50   ~ 0
+Text Label 1350 6475 3    50   ~ 0
 SPI_MOSI
 Wire Wire Line
-	1475 5875 1475 6275
+	1450 6475 1450 6875
 Wire Wire Line
-	1275 5875 1275 6275
+	1250 6475 1250 6875
 Wire Wire Line
-	1375 5875 1375 6275
-Text Label 1275 5875 3    50   ~ 0
+	1350 6475 1350 6875
+Text Label 1250 6475 3    50   ~ 0
 SPI_MISO
-Text Label 1475 5875 3    50   ~ 0
+Text Label 1450 6475 3    50   ~ 0
 SPI_SCK
 Wire Wire Line
-	1175 6275 1175 5875
+	1150 6875 1150 6475
 Wire Wire Line
-	1075 6275 1075 5875
-Text Label 1175 5875 3    50   ~ 0
+	1050 6875 1050 6475
+Text Label 1150 6475 3    50   ~ 0
 UART_2_TX
-Text Label 1075 5875 3    50   ~ 0
+Text Label 1050 6475 3    50   ~ 0
 UART_2_RX
-Text Notes 825  5775 0    79   ~ 0
+Text Notes 800  6375 0    99   ~ 20
 ESD protection
 $Comp
 L TCY_IC:WS2818B U?
@@ -912,7 +908,7 @@ F 3 "" H 2700 4000 50  0001 C CNN
 	1    2700 4000
 	1    0    0    -1  
 $EndComp
-Text Notes 1825 3675 0    79   ~ 0
+Text Notes 1825 3675 0    99   ~ 20
 RGB signalization
 Text Label 3100 2725 2    50   ~ 0
 UART_2_RX
@@ -947,16 +943,16 @@ Wire Wire Line
 Wire Wire Line
 	2550 2000 3100 2000
 Wire Wire Line
-	2550 1325 3100 1325
+	2525 1325 3075 1325
 Wire Wire Line
-	2550 1175 3100 1175
+	2525 1175 3075 1175
 Wire Wire Line
-	2550 1025 3100 1025
-Text Label 3100 1325 2    50   ~ 0
+	2525 1025 3075 1025
+Text Label 3075 1325 2    50   ~ 0
 I_MON
-Text Label 3100 1025 2    50   ~ 0
+Text Label 3075 1025 2    50   ~ 0
 5V_MON
-Text Label 3100 1175 2    50   ~ 0
+Text Label 3075 1175 2    50   ~ 0
 PWR_MON
 $Comp
 L Device:R_Pack04 RN101
@@ -1331,4 +1327,138 @@ Wire Wire Line
 	8200 5750 8200 6000
 Wire Wire Line
 	8300 5750 8300 6000
+Wire Wire Line
+	4500 4475 5000 4475
+Wire Wire Line
+	5000 4375 4500 4375
+Wire Wire Line
+	4500 4275 5000 4275
+Wire Wire Line
+	5000 4175 4500 4175
+Wire Wire Line
+	4500 4075 5000 4075
+Wire Wire Line
+	5000 3975 4500 3975
+Text Label 4500 3975 0    50   ~ 0
+CS_1
+Text Label 4500 4075 0    50   ~ 0
+CS_2
+Text Label 4500 4175 0    50   ~ 0
+CS_3
+Text Label 4500 4275 0    50   ~ 0
+CS_4
+Text Label 4500 4375 0    50   ~ 0
+CS_5
+Text Label 4500 4475 0    50   ~ 0
+CS_6
+Wire Wire Line
+	4500 3575 5000 3575
+Wire Wire Line
+	5000 3475 4500 3475
+Wire Wire Line
+	4500 3375 5000 3375
+Wire Wire Line
+	5000 3275 4500 3275
+Wire Wire Line
+	4500 3875 5000 3875
+Wire Wire Line
+	5000 3775 4500 3775
+Text Label 4500 3275 0    50   ~ 0
+FLAG_1
+Text Label 8575 1750 0    50   ~ 0
+FLAG_2
+Text Label 8575 1850 0    50   ~ 0
+BUSY_2
+Wire Wire Line
+	8575 1850 9150 1850
+Wire Wire Line
+	8575 1750 9150 1750
+Text Label 4500 3375 0    50   ~ 0
+FLAG_2
+Text Label 4500 3475 0    50   ~ 0
+FLAG_3
+Text Label 4500 3575 0    50   ~ 0
+FLAG_4
+Text Label 4500 3775 0    50   ~ 0
+FLAG_5
+Text Label 4500 3875 0    50   ~ 0
+FLAG_6
+Text Notes 9700 1175 0    118  ~ 24
+Motor 1
+Text Notes 9675 2075 0    118  ~ 24
+Motor 2\n
+Text Notes 9700 3075 0    118  ~ 24
+Motor 3
+Text Notes 9675 4000 0    118  ~ 24
+Motor 4\n
+Text Notes 9650 4925 0    118  ~ 24
+Motor 5
+Text Notes 9625 5925 0    118  ~ 24
+Motor 6\n
+Text Notes 925  1275 0    118  ~ 24
+Power input
+Text Notes 1200 2550 0    118  ~ 24
+Interface
+Wire Wire Line
+	5000 2675 4500 2675
+Wire Wire Line
+	4500 2575 5000 2575
+Wire Wire Line
+	5000 2475 4500 2475
+Wire Wire Line
+	4500 2975 5000 2975
+Wire Wire Line
+	5000 2875 4500 2875
+Wire Wire Line
+	6200 3675 6750 3675
+Text Label 4500 2475 0    50   ~ 0
+BUSY_1
+Text Label 4500 2575 0    50   ~ 0
+BUSY_2
+Text Label 4500 2675 0    50   ~ 0
+BUSY_3
+Text Label 4500 2875 0    50   ~ 0
+BUSY_4
+Text Label 4500 2975 0    50   ~ 0
+BUSY_5
+Text Label 6750 3675 2    50   ~ 0
+BUSY_6
+NoConn ~ 6200 3375
+NoConn ~ 6200 3975
+NoConn ~ 6200 4075
+NoConn ~ 6200 4175
+NoConn ~ 6200 4275
+NoConn ~ 6200 4775
+Wire Wire Line
+	9050 6000 9050 6400
+Connection ~ 9050 6000
+Wire Wire Line
+	8950 5900 8950 6300
+Connection ~ 8950 5900
+Wire Wire Line
+	8850 5800 8850 6200
+Connection ~ 8850 5800
+Text Label 7950 6200 0    50   ~ 0
+SPI_MISO
+Text Label 7950 6300 0    50   ~ 0
+SPI_MOSI
+Text Label 7950 6400 0    50   ~ 0
+SPI_SCK
+Wire Wire Line
+	7950 6200 8850 6200
+Wire Wire Line
+	7950 6300 8950 6300
+Wire Wire Line
+	7950 6400 9050 6400
+$Comp
+L power:PWR_FLAG #FLG0108
+U 1 1 5E41ECA3
+P 2125 4050
+F 0 "#FLG0108" H 2125 4125 50  0001 C CNN
+F 1 "PWR_FLAG" H 2125 4200 50  0000 C CNN
+F 2 "" H 2125 4050 50  0001 C CNN
+F 3 "~" H 2125 4050 50  0001 C CNN
+	1    2125 4050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
