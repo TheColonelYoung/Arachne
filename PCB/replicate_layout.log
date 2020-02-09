@@ -1,122 +1,180 @@
-02-09 21:31:55 replicate_layout.action_replicate_layout 121:Replicate layout plugin version: 13 started
-02-09 21:32:00 replicate_layout.action_replicate_layout 121:Replicate layout plugin version: 13 started
-02-09 21:32:08 replicate_layout.action_replicate_layout 121:Replicate layout plugin version: 13 started
-02-09 21:32:08 replicate_layout.action_replicate_layout 152:Preparing replicator with C510 as a reference
-02-09 21:32:08 replicate_layout.replicatelayout 193:getting project hierarchy from schematics
-02-09 21:32:08 replicate_layout.replicatelayout 195:Project hierarchy looks like:
+02-09 23:35:34 replicate_layout.action_replicate_layout 121:Replicate layout plugin version: 13 started
+02-09 23:35:34 replicate_layout.action_replicate_layout 152:Preparing replicator with C711 as a reference
+02-09 23:35:34 replicate_layout.replicatelayout 193:getting project hierarchy from schematics
+02-09 23:35:34 replicate_layout.replicatelayout 195:Project hierarchy looks like:
 {'5D3521E4': ['Motor_1', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4BFD94': ['Motor_2', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05D6': ['Motor_3', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05DE': ['Motor_4', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14A6': ['Motor_5', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14AE': ['Motor_6', '/home/petr/work/arachne/PCB/Motor.sch'], '5D436602': ['Power', '/home/petr/work/arachne/PCB/power.sch'], '5E43C48F': ['Interface', '/home/petr/work/arachne/PCB/Interface.sch']}
-02-09 21:32:08 replicate_layout.replicatelayout 203:getting a list of all footprints on board
-02-09 21:32:08 replicate_layout.action_replicate_layout 176:Pivot footprint is 'C510'
-Located on:['Motor_4']
-With filenames:['Motor.sch']
-With sheet_id:['Motor_4']
-02-09 21:32:08 replicate_layout.action_replicate_layout 180:Corresponding footprints are 
-[('C210', ['Motor_1']), ('C310', ['Motor_2']), ('C410', ['Motor_3']), ('C510', ['Motor_4']), ('C610', ['Motor_5']), ('C710', ['Motor_6'])]
-02-09 21:32:08 replicate_layout.action_replicate_layout 192:Showing dialog
-02-09 21:32:08 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_4', file:'Motor.sch'
-02-09 21:32:08 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_4']
-02-09 21:32:08 replicate_layout.replicatelayout 241:Footprints on the sheets:
-['C210', 'C310', 'C410', 'C510', 'C610', 'C710']
-02-09 21:32:08 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
-['/5D3521E4/5D3586E5', '/5D4BFD94/5D3586E5', '/5D4C05D6/5D3586E5', '/5D4C05DE/5D3586E5', '/5D4C14A6/5D3586E5', '/5D4C14AE/5D3586E5']
-02-09 21:32:08 replicate_layout.replicatelayout 260:All sheets to replicate:
-[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 21:32:08 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
-[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 21:32:08 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
-[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_5'], ['Motor_6']]
-02-09 21:32:20 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_4', file:'Motor.sch'
-02-09 21:32:20 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_4']
-02-09 21:32:20 replicate_layout.replicatelayout 241:Footprints on the sheets:
-['C210', 'C310', 'C410', 'C510', 'C610', 'C710']
-02-09 21:32:20 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
-['/5D3521E4/5D3586E5', '/5D4BFD94/5D3586E5', '/5D4C05D6/5D3586E5', '/5D4C05DE/5D3586E5', '/5D4C14A6/5D3586E5', '/5D4C14AE/5D3586E5']
-02-09 21:32:20 replicate_layout.replicatelayout 260:All sheets to replicate:
-[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 21:32:20 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
-[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 21:32:20 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
-[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_5'], ['Motor_6']]
-02-09 21:32:20 replicate_layout.action_replicate_layout 220:Replicating layout
-02-09 21:32:20 replicate_layout.replicatelayout 989:Starting replication of sheets: [['Motor_6']]
-on level: ['Motor_4']
-with tracks=True, zone=True, text=True, containing=True, remov=False
-02-09 21:32:20 replicate_layout.replicatelayout 526:Getting the list of pivot footprints
-02-09 21:32:20 replicate_layout.replicatelayout 529:Getting the list of all the remaining footprints
-02-09 21:32:20 replicate_layout.replicatelayout 532:Getting nets local to pivot footprints
-02-09 21:32:21 replicate_layout.replicatelayout 535:Getting pivot bounding box
-02-09 21:32:21 replicate_layout.replicatelayout 538:Getting pivot tracks
-02-09 21:32:21 replicate_layout.replicatelayout 541:Getting pivot zones
-02-09 21:32:21 replicate_layout.replicatelayout 544:Getting pivot text items
-02-09 21:32:21 replicate_layout.replicatelayout 547:Getting pivot text items
-02-09 21:32:21 replicate_layout.replicatelayout 551:Replicating footprints
-02-09 21:32:21 replicate_layout.replicatelayout 553:Replicating footprints on sheet ['Motor_6']
-02-09 21:32:21 replicate_layout.replicatelayout 657:Replicating tracks
-02-09 21:32:21 replicate_layout.replicatelayout 659:Replicating tracks on sheet ['Motor_6']
-02-09 21:32:21 replicate_layout.replicatelayout 755:Replicating zones
-02-09 21:32:21 replicate_layout.replicatelayout 758:Replicating zones on sheet ['Motor_6']
-02-09 21:32:21 replicate_layout.replicatelayout 855:Replicating text
-02-09 21:32:21 replicate_layout.replicatelayout 858:Replicating text on sheet ['Motor_6']
-02-09 21:32:21 replicate_layout.replicatelayout 876:Replicating drawings
-02-09 21:32:21 replicate_layout.replicatelayout 878:Replicating drawings on sheet ['Motor_6']
-02-09 21:32:21 replicate_layout.action_replicate_layout 230:Replication complete
-02-09 22:06:26 replicate_layout.action_replicate_layout 121:Replicate layout plugin version: 13 started
-02-09 22:06:26 replicate_layout.action_replicate_layout 152:Preparing replicator with C711 as a reference
-02-09 22:06:26 replicate_layout.replicatelayout 193:getting project hierarchy from schematics
-02-09 22:06:26 replicate_layout.replicatelayout 195:Project hierarchy looks like:
-{'5D3521E4': ['Motor_1', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4BFD94': ['Motor_2', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05D6': ['Motor_3', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05DE': ['Motor_4', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14A6': ['Motor_5', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14AE': ['Motor_6', '/home/petr/work/arachne/PCB/Motor.sch'], '5D436602': ['Power', '/home/petr/work/arachne/PCB/power.sch'], '5E43C48F': ['Interface', '/home/petr/work/arachne/PCB/Interface.sch']}
-02-09 22:06:26 replicate_layout.replicatelayout 203:getting a list of all footprints on board
-02-09 22:06:26 replicate_layout.action_replicate_layout 176:Pivot footprint is 'C711'
+02-09 23:35:34 replicate_layout.replicatelayout 203:getting a list of all footprints on board
+02-09 23:35:34 replicate_layout.action_replicate_layout 176:Pivot footprint is 'C711'
 Located on:['Motor_6']
 With filenames:['Motor.sch']
 With sheet_id:['Motor_6']
-02-09 22:06:26 replicate_layout.action_replicate_layout 180:Corresponding footprints are 
+02-09 23:35:34 replicate_layout.action_replicate_layout 180:Corresponding footprints are 
 [('C211', ['Motor_1']), ('C311', ['Motor_2']), ('C411', ['Motor_3']), ('C511', ['Motor_4']), ('C611', ['Motor_5']), ('C711', ['Motor_6'])]
-02-09 22:06:26 replicate_layout.action_replicate_layout 192:Showing dialog
-02-09 22:06:26 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
-02-09 22:06:26 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
-02-09 22:06:26 replicate_layout.replicatelayout 241:Footprints on the sheets:
+02-09 23:35:34 replicate_layout.action_replicate_layout 192:Showing dialog
+02-09 23:35:34 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
+02-09 23:35:34 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
+02-09 23:35:34 replicate_layout.replicatelayout 241:Footprints on the sheets:
 ['C211', 'C311', 'C411', 'C511', 'C611', 'C711']
-02-09 22:06:26 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
+02-09 23:35:34 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
 ['/5D3521E4/5D35869E', '/5D4BFD94/5D35869E', '/5D4C05D6/5D35869E', '/5D4C05DE/5D35869E', '/5D4C14A6/5D35869E', '/5D4C14AE/5D35869E']
-02-09 22:06:26 replicate_layout.replicatelayout 260:All sheets to replicate:
+02-09 23:35:34 replicate_layout.replicatelayout 260:All sheets to replicate:
 [['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 22:06:26 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
+02-09 23:35:34 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
 [['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 22:06:26 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
+02-09 23:35:34 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
 [['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5']]
-02-09 22:06:35 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
-02-09 22:06:35 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
-02-09 22:06:35 replicate_layout.replicatelayout 241:Footprints on the sheets:
+02-09 23:35:38 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
+02-09 23:35:38 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
+02-09 23:35:38 replicate_layout.replicatelayout 241:Footprints on the sheets:
 ['C211', 'C311', 'C411', 'C511', 'C611', 'C711']
-02-09 22:06:35 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
+02-09 23:35:38 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
 ['/5D3521E4/5D35869E', '/5D4BFD94/5D35869E', '/5D4C05D6/5D35869E', '/5D4C05DE/5D35869E', '/5D4C14A6/5D35869E', '/5D4C14AE/5D35869E']
-02-09 22:06:35 replicate_layout.replicatelayout 260:All sheets to replicate:
+02-09 23:35:38 replicate_layout.replicatelayout 260:All sheets to replicate:
 [['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 22:06:35 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
+02-09 23:35:38 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
 [['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
-02-09 22:06:35 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
+02-09 23:35:38 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
 [['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5']]
-02-09 22:06:35 replicate_layout.action_replicate_layout 220:Replicating layout
-02-09 22:06:35 replicate_layout.replicatelayout 989:Starting replication of sheets: [['Motor_5']]
+02-09 23:35:38 replicate_layout.action_replicate_layout 220:Replicating layout
+02-09 23:35:38 replicate_layout.replicatelayout 989:Starting replication of sheets: [['Motor_5']]
 on level: ['Motor_6']
 with tracks=True, zone=True, text=True, containing=True, remov=False
-02-09 22:06:35 replicate_layout.replicatelayout 526:Getting the list of pivot footprints
-02-09 22:06:35 replicate_layout.replicatelayout 529:Getting the list of all the remaining footprints
-02-09 22:06:35 replicate_layout.replicatelayout 532:Getting nets local to pivot footprints
-02-09 22:06:35 replicate_layout.replicatelayout 535:Getting pivot bounding box
-02-09 22:06:35 replicate_layout.replicatelayout 538:Getting pivot tracks
-02-09 22:06:35 replicate_layout.replicatelayout 541:Getting pivot zones
-02-09 22:06:35 replicate_layout.replicatelayout 544:Getting pivot text items
-02-09 22:06:35 replicate_layout.replicatelayout 547:Getting pivot text items
-02-09 22:06:35 replicate_layout.replicatelayout 551:Replicating footprints
-02-09 22:06:35 replicate_layout.replicatelayout 553:Replicating footprints on sheet ['Motor_5']
-02-09 22:06:35 replicate_layout.replicatelayout 657:Replicating tracks
-02-09 22:06:35 replicate_layout.replicatelayout 659:Replicating tracks on sheet ['Motor_5']
-02-09 22:06:35 replicate_layout.replicatelayout 755:Replicating zones
-02-09 22:06:35 replicate_layout.replicatelayout 758:Replicating zones on sheet ['Motor_5']
-02-09 22:06:35 replicate_layout.replicatelayout 855:Replicating text
-02-09 22:06:35 replicate_layout.replicatelayout 858:Replicating text on sheet ['Motor_5']
-02-09 22:06:35 replicate_layout.replicatelayout 876:Replicating drawings
-02-09 22:06:35 replicate_layout.replicatelayout 878:Replicating drawings on sheet ['Motor_5']
-02-09 22:06:35 replicate_layout.action_replicate_layout 230:Replication complete
+02-09 23:35:38 replicate_layout.replicatelayout 526:Getting the list of pivot footprints
+02-09 23:35:38 replicate_layout.replicatelayout 529:Getting the list of all the remaining footprints
+02-09 23:35:38 replicate_layout.replicatelayout 532:Getting nets local to pivot footprints
+02-09 23:35:38 replicate_layout.replicatelayout 535:Getting pivot bounding box
+02-09 23:35:38 replicate_layout.replicatelayout 538:Getting pivot tracks
+02-09 23:35:38 replicate_layout.replicatelayout 541:Getting pivot zones
+02-09 23:35:38 replicate_layout.replicatelayout 544:Getting pivot text items
+02-09 23:35:38 replicate_layout.replicatelayout 547:Getting pivot text items
+02-09 23:35:38 replicate_layout.replicatelayout 551:Replicating footprints
+02-09 23:35:38 replicate_layout.replicatelayout 553:Replicating footprints on sheet ['Motor_5']
+02-09 23:35:39 replicate_layout.replicatelayout 657:Replicating tracks
+02-09 23:35:39 replicate_layout.replicatelayout 659:Replicating tracks on sheet ['Motor_5']
+02-09 23:35:39 replicate_layout.replicatelayout 755:Replicating zones
+02-09 23:35:39 replicate_layout.replicatelayout 758:Replicating zones on sheet ['Motor_5']
+02-09 23:35:39 replicate_layout.replicatelayout 855:Replicating text
+02-09 23:35:39 replicate_layout.replicatelayout 858:Replicating text on sheet ['Motor_5']
+02-09 23:35:39 replicate_layout.replicatelayout 876:Replicating drawings
+02-09 23:35:39 replicate_layout.replicatelayout 878:Replicating drawings on sheet ['Motor_5']
+02-09 23:35:39 replicate_layout.action_replicate_layout 230:Replication complete
+02-09 23:36:14 replicate_layout.action_replicate_layout 121:Replicate layout plugin version: 13 started
+02-09 23:36:14 replicate_layout.action_replicate_layout 152:Preparing replicator with C711 as a reference
+02-09 23:36:14 replicate_layout.replicatelayout 193:getting project hierarchy from schematics
+02-09 23:36:14 replicate_layout.replicatelayout 195:Project hierarchy looks like:
+{'5D3521E4': ['Motor_1', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4BFD94': ['Motor_2', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05D6': ['Motor_3', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05DE': ['Motor_4', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14A6': ['Motor_5', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14AE': ['Motor_6', '/home/petr/work/arachne/PCB/Motor.sch'], '5D436602': ['Power', '/home/petr/work/arachne/PCB/power.sch'], '5E43C48F': ['Interface', '/home/petr/work/arachne/PCB/Interface.sch']}
+02-09 23:36:14 replicate_layout.replicatelayout 203:getting a list of all footprints on board
+02-09 23:36:14 replicate_layout.action_replicate_layout 176:Pivot footprint is 'C711'
+Located on:['Motor_6']
+With filenames:['Motor.sch']
+With sheet_id:['Motor_6']
+02-09 23:36:14 replicate_layout.action_replicate_layout 180:Corresponding footprints are 
+[('C211', ['Motor_1']), ('C311', ['Motor_2']), ('C411', ['Motor_3']), ('C511', ['Motor_4']), ('C611', ['Motor_5']), ('C711', ['Motor_6'])]
+02-09 23:36:14 replicate_layout.action_replicate_layout 192:Showing dialog
+02-09 23:36:14 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
+02-09 23:36:14 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
+02-09 23:36:14 replicate_layout.replicatelayout 241:Footprints on the sheets:
+['C211', 'C311', 'C411', 'C511', 'C611', 'C711']
+02-09 23:36:14 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
+['/5D3521E4/5D35869E', '/5D4BFD94/5D35869E', '/5D4C05D6/5D35869E', '/5D4C05DE/5D35869E', '/5D4C14A6/5D35869E', '/5D4C14AE/5D35869E']
+02-09 23:36:14 replicate_layout.replicatelayout 260:All sheets to replicate:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:14 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:14 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5']]
+02-09 23:36:16 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
+02-09 23:36:16 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
+02-09 23:36:16 replicate_layout.replicatelayout 241:Footprints on the sheets:
+['C211', 'C311', 'C411', 'C511', 'C611', 'C711']
+02-09 23:36:16 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
+['/5D3521E4/5D35869E', '/5D4BFD94/5D35869E', '/5D4C05D6/5D35869E', '/5D4C05DE/5D35869E', '/5D4C14A6/5D35869E', '/5D4C14AE/5D35869E']
+02-09 23:36:16 replicate_layout.replicatelayout 260:All sheets to replicate:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:16 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:16 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5']]
+02-09 23:36:16 replicate_layout.action_replicate_layout 220:Replicating layout
+02-09 23:36:16 replicate_layout.replicatelayout 989:Starting replication of sheets: [['Motor_5']]
+on level: ['Motor_6']
+with tracks=True, zone=True, text=True, containing=True, remov=False
+02-09 23:36:16 replicate_layout.replicatelayout 526:Getting the list of pivot footprints
+02-09 23:36:16 replicate_layout.replicatelayout 529:Getting the list of all the remaining footprints
+02-09 23:36:16 replicate_layout.replicatelayout 532:Getting nets local to pivot footprints
+02-09 23:36:16 replicate_layout.replicatelayout 535:Getting pivot bounding box
+02-09 23:36:16 replicate_layout.replicatelayout 538:Getting pivot tracks
+02-09 23:36:16 replicate_layout.replicatelayout 541:Getting pivot zones
+02-09 23:36:16 replicate_layout.replicatelayout 544:Getting pivot text items
+02-09 23:36:16 replicate_layout.replicatelayout 547:Getting pivot text items
+02-09 23:36:16 replicate_layout.replicatelayout 551:Replicating footprints
+02-09 23:36:16 replicate_layout.replicatelayout 553:Replicating footprints on sheet ['Motor_5']
+02-09 23:36:17 replicate_layout.replicatelayout 657:Replicating tracks
+02-09 23:36:17 replicate_layout.replicatelayout 659:Replicating tracks on sheet ['Motor_5']
+02-09 23:36:17 replicate_layout.replicatelayout 755:Replicating zones
+02-09 23:36:17 replicate_layout.replicatelayout 758:Replicating zones on sheet ['Motor_5']
+02-09 23:36:17 replicate_layout.replicatelayout 855:Replicating text
+02-09 23:36:17 replicate_layout.replicatelayout 858:Replicating text on sheet ['Motor_5']
+02-09 23:36:17 replicate_layout.replicatelayout 876:Replicating drawings
+02-09 23:36:17 replicate_layout.replicatelayout 878:Replicating drawings on sheet ['Motor_5']
+02-09 23:36:17 replicate_layout.action_replicate_layout 230:Replication complete
+02-09 23:36:50 replicate_layout.action_replicate_layout 121:Replicate layout plugin version: 13 started
+02-09 23:36:50 replicate_layout.action_replicate_layout 152:Preparing replicator with C711 as a reference
+02-09 23:36:50 replicate_layout.replicatelayout 193:getting project hierarchy from schematics
+02-09 23:36:50 replicate_layout.replicatelayout 195:Project hierarchy looks like:
+{'5D3521E4': ['Motor_1', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4BFD94': ['Motor_2', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05D6': ['Motor_3', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C05DE': ['Motor_4', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14A6': ['Motor_5', '/home/petr/work/arachne/PCB/Motor.sch'], '5D4C14AE': ['Motor_6', '/home/petr/work/arachne/PCB/Motor.sch'], '5D436602': ['Power', '/home/petr/work/arachne/PCB/power.sch'], '5E43C48F': ['Interface', '/home/petr/work/arachne/PCB/Interface.sch']}
+02-09 23:36:50 replicate_layout.replicatelayout 203:getting a list of all footprints on board
+02-09 23:36:50 replicate_layout.action_replicate_layout 176:Pivot footprint is 'C711'
+Located on:['Motor_6']
+With filenames:['Motor.sch']
+With sheet_id:['Motor_6']
+02-09 23:36:50 replicate_layout.action_replicate_layout 180:Corresponding footprints are 
+[('C211', ['Motor_1']), ('C311', ['Motor_2']), ('C411', ['Motor_3']), ('C511', ['Motor_4']), ('C611', ['Motor_5']), ('C711', ['Motor_6'])]
+02-09 23:36:50 replicate_layout.action_replicate_layout 192:Showing dialog
+02-09 23:36:50 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
+02-09 23:36:50 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
+02-09 23:36:50 replicate_layout.replicatelayout 241:Footprints on the sheets:
+['C211', 'C311', 'C411', 'C511', 'C611', 'C711']
+02-09 23:36:50 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
+['/5D3521E4/5D35869E', '/5D4BFD94/5D35869E', '/5D4C05D6/5D35869E', '/5D4C05DE/5D35869E', '/5D4C14A6/5D35869E', '/5D4C14AE/5D35869E']
+02-09 23:36:50 replicate_layout.replicatelayout 260:All sheets to replicate:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:50 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:50 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5']]
+02-09 23:36:51 replicate_layout.replicatelayout 230:construcing a list of sheets suitable for replication on level:'Motor_6', file:'Motor.sch'
+02-09 23:36:51 replicate_layout.replicatelayout 237:Sheet ids up to the level:['Motor_6']
+02-09 23:36:51 replicate_layout.replicatelayout 241:Footprints on the sheets:
+['C211', 'C311', 'C411', 'C511', 'C611', 'C711']
+02-09 23:36:51 replicate_layout.replicatelayout 244:Footprints raw sheet ids:
+['/5D3521E4/5D35869E', '/5D4BFD94/5D35869E', '/5D4C05D6/5D35869E', '/5D4C05DE/5D35869E', '/5D4C14A6/5D35869E', '/5D4C14AE/5D35869E']
+02-09 23:36:51 replicate_layout.replicatelayout 260:All sheets to replicate:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:51 replicate_layout.replicatelayout 265:All sheets to replicate sorted:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5'], ['Motor_6']]
+02-09 23:36:51 replicate_layout.replicatelayout 271:All sheets to replicate sorted and without pivot_sheet:
+[['Motor_1'], ['Motor_2'], ['Motor_3'], ['Motor_4'], ['Motor_5']]
+02-09 23:36:51 replicate_layout.action_replicate_layout 220:Replicating layout
+02-09 23:36:51 replicate_layout.replicatelayout 989:Starting replication of sheets: [['Motor_5']]
+on level: ['Motor_6']
+with tracks=True, zone=True, text=True, containing=True, remov=False
+02-09 23:36:51 replicate_layout.replicatelayout 526:Getting the list of pivot footprints
+02-09 23:36:51 replicate_layout.replicatelayout 529:Getting the list of all the remaining footprints
+02-09 23:36:51 replicate_layout.replicatelayout 532:Getting nets local to pivot footprints
+02-09 23:36:52 replicate_layout.replicatelayout 535:Getting pivot bounding box
+02-09 23:36:52 replicate_layout.replicatelayout 538:Getting pivot tracks
+02-09 23:36:52 replicate_layout.replicatelayout 541:Getting pivot zones
+02-09 23:36:52 replicate_layout.replicatelayout 544:Getting pivot text items
+02-09 23:36:52 replicate_layout.replicatelayout 547:Getting pivot text items
+02-09 23:36:52 replicate_layout.replicatelayout 551:Replicating footprints
+02-09 23:36:52 replicate_layout.replicatelayout 553:Replicating footprints on sheet ['Motor_5']
+02-09 23:36:52 replicate_layout.replicatelayout 657:Replicating tracks
+02-09 23:36:52 replicate_layout.replicatelayout 659:Replicating tracks on sheet ['Motor_5']
+02-09 23:36:52 replicate_layout.replicatelayout 755:Replicating zones
+02-09 23:36:52 replicate_layout.replicatelayout 758:Replicating zones on sheet ['Motor_5']
+02-09 23:36:52 replicate_layout.replicatelayout 855:Replicating text
+02-09 23:36:52 replicate_layout.replicatelayout 858:Replicating text on sheet ['Motor_5']
+02-09 23:36:52 replicate_layout.replicatelayout 876:Replicating drawings
+02-09 23:36:52 replicate_layout.replicatelayout 878:Replicating drawings on sheet ['Motor_5']
+02-09 23:36:52 replicate_layout.action_replicate_layout 230:Replication complete
