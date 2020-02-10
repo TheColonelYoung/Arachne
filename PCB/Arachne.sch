@@ -965,9 +965,9 @@ Text Label 8575 900  0    50   ~ 0
 BUSY_1
 Text Label 8575 2300 0    50   ~ 0
 CS_2
-Text Label 8200 2200 1    50   ~ 0
+Text Label 8000 2200 1    50   ~ 0
 FLAG_2
-Text Label 8300 2200 1    50   ~ 0
+Text Label 8100 2200 1    50   ~ 0
 BUSY_2
 Wire Wire Line
 	8575 2300 9150 2300
@@ -1057,18 +1057,18 @@ $EndComp
 Connection ~ 8000 900 
 Wire Wire Line
 	8300 1200 8300 1550
-Text Label 8100 2200 1    50   ~ 0
+Text Label 8200 2200 1    50   ~ 0
 FLAG_1
-Wire Wire Line
-	8100 1950 8100 2200
-Wire Wire Line
-	8000 1950 8000 2200
-Text Label 8000 2200 1    50   ~ 0
-BUSY_1
 Wire Wire Line
 	8200 1950 8200 2200
 Wire Wire Line
 	8300 1950 8300 2200
+Text Label 8300 2200 1    50   ~ 0
+BUSY_1
+Wire Wire Line
+	8000 1950 8000 2200
+Wire Wire Line
+	8100 1950 8100 2200
 $Comp
 L Device:R_Pack04 RN102
 U 1 1 5E6205A4
@@ -1124,9 +1124,9 @@ F 3 "~" H 8000 3200 50  0001 C CNN
 	1    8000 3200
 	0    -1   -1   0   
 $EndComp
-Text Label 8200 4075 1    50   ~ 0
+Text Label 8000 4075 1    50   ~ 0
 FLAG_4
-Text Label 8300 4075 1    50   ~ 0
+Text Label 8100 4075 1    50   ~ 0
 BUSY_4
 Wire Wire Line
 	8200 3425 8200 3350
@@ -1160,18 +1160,18 @@ $EndComp
 Connection ~ 8000 2775
 Wire Wire Line
 	8300 3075 8300 3425
-Text Label 8100 4075 1    50   ~ 0
+Text Label 8300 4075 1    50   ~ 0
 FLAG_3
 Wire Wire Line
-	8100 3825 8100 4075
-Wire Wire Line
-	8000 3825 8000 4075
-Text Label 8000 4075 1    50   ~ 0
-BUSY_3
+	8300 3825 8300 4075
 Wire Wire Line
 	8200 3825 8200 4075
+Text Label 8200 4075 1    50   ~ 0
+BUSY_3
 Wire Wire Line
-	8300 3825 8300 4075
+	8000 3825 8000 4075
+Wire Wire Line
+	8100 3825 8100 4075
 $Comp
 L Device:R_Pack04 RN103
 U 1 1 5E62B711
@@ -1227,9 +1227,9 @@ F 3 "~" H 8000 5125 50  0001 C CNN
 	1    8000 5125
 	0    -1   -1   0   
 $EndComp
-Text Label 8200 6000 1    50   ~ 0
+Text Label 8000 6000 1    50   ~ 0
 FLAG_6
-Text Label 8300 6000 1    50   ~ 0
+Text Label 8100 6000 1    50   ~ 0
 BUSY_6
 Wire Wire Line
 	8200 5350 8200 5275
@@ -1263,18 +1263,18 @@ $EndComp
 Connection ~ 8000 4700
 Wire Wire Line
 	8300 5000 8300 5350
-Text Label 8100 6000 1    50   ~ 0
+Text Label 8300 6000 1    50   ~ 0
 FLAG_5
 Wire Wire Line
-	8100 5750 8100 6000
-Wire Wire Line
-	8000 5750 8000 6000
-Text Label 8000 6000 1    50   ~ 0
-BUSY_5
+	8300 5750 8300 6000
 Wire Wire Line
 	8200 5750 8200 6000
+Text Label 8200 6000 1    50   ~ 0
+BUSY_5
 Wire Wire Line
-	8300 5750 8300 6000
+	8000 5750 8000 6000
+Wire Wire Line
+	8100 5750 8100 6000
 Wire Wire Line
 	4500 4475 5000 4475
 Wire Wire Line
