@@ -1061,18 +1061,18 @@ Connection ~ 6250 1375
 $Comp
 L Device:Ferrite_Bead FB801
 U 1 1 5D478B04
-P 6575 975
-F 0 "FB801" V 6301 975 50  0000 C CNN
-F 1 "22R@100MHz" V 6392 975 50  0000 C CNN
-F 2 "Inductor_SMD:L_0805_2012Metric" V 6505 975 50  0001 C CNN
-F 3 "~" H 6575 975 50  0001 C CNN
-	1    6575 975 
+P 6975 850
+F 0 "FB801" V 7275 650 50  0000 C CNN
+F 1 "22R@100MHz" V 7275 1175 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" V 6905 850 50  0001 C CNN
+F 3 "~" H 6975 850 50  0001 C CNN
+	1    6975 850 
 	0    1    1    0   
 $EndComp
-Text GLabel 7025 975  2    50   Input ~ 0
+Text GLabel 7425 975  2    50   Input ~ 0
 VMOT
 Wire Wire Line
-	6725 975  6925 975 
+	7125 975  7325 975 
 Wire Wire Line
 	6950 1775 7450 1775
 $Comp
@@ -1105,11 +1105,9 @@ F 3 "www.st.com/resource/en/datasheet/esda6v1-5sc6.pdf" V 9100 2100 50  0001 C C
 $EndComp
 Wire Wire Line
 	6250 1375 6250 975 
-Wire Wire Line
-	6250 975  6425 975 
 Text Notes 6150 2525 0    50   ~ 0
 Main voltage monitoring
-Text Notes 6450 650  0    50   ~ 0
+Text Notes 6850 650  0    50   ~ 0
 Motor power supply
 Text Notes 3700 2500 0    50   ~ 0
 Current measuring
@@ -1223,17 +1221,17 @@ PWR_MON
 $Comp
 L power:PWR_FLAG #FLG0107
 U 1 1 5E41C5DC
-P 6925 975
-F 0 "#FLG0107" H 6925 1050 50  0001 C CNN
-F 1 "PWR_FLAG" H 7050 1125 50  0000 C CNN
-F 2 "" H 6925 975 50  0001 C CNN
-F 3 "~" H 6925 975 50  0001 C CNN
-	1    6925 975 
+P 7325 975
+F 0 "#FLG0107" H 7325 1050 50  0001 C CNN
+F 1 "PWR_FLAG" H 7550 1075 50  0000 C CNN
+F 2 "" H 7325 975 50  0001 C CNN
+F 3 "~" H 7325 975 50  0001 C CNN
+	1    7325 975 
 	1    0    0    -1  
 $EndComp
-Connection ~ 6925 975 
+Connection ~ 7325 975 
 Wire Wire Line
-	6925 975  7025 975 
+	7325 975  7425 975 
 NoConn ~ 9000 1900
 NoConn ~ 9200 1900
 $Comp
@@ -1241,10 +1239,33 @@ L power:PWR_FLAG #FLG0109
 U 1 1 5E439F29
 P 6550 1375
 F 0 "#FLG0109" H 6550 1450 50  0001 C CNN
-F 1 "PWR_FLAG" H 6550 1550 50  0000 C CNN
+F 1 "PWR_FLAG" H 6550 1525 50  0000 C CNN
 F 2 "" H 6550 1375 50  0001 C CNN
 F 3 "~" H 6550 1375 50  0001 C CNN
 	1    6550 1375
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7125 975  7125 850 
+Wire Wire Line
+	6825 850  6825 975 
+Wire Wire Line
+	6250 975  6825 975 
+$Comp
+L Device:Ferrite_Bead FB802
+U 1 1 5E547299
+P 6975 1100
+F 0 "FB802" V 6675 925 50  0000 C CNN
+F 1 "22R@100MHz" V 6600 1400 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" V 6905 1100 50  0001 C CNN
+F 3 "~" H 6975 1100 50  0001 C CNN
+	1    6975 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7125 1100 7125 975 
+Connection ~ 7125 975 
+Wire Wire Line
+	6825 975  6825 1100
+Connection ~ 6825 975 
 $EndSCHEMATC
