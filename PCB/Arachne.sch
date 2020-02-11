@@ -967,8 +967,6 @@ Text Label 8575 2300 0    50   ~ 0
 CS_2
 Text Label 8000 2200 1    50   ~ 0
 FLAG_2
-Text Label 8100 2200 1    50   ~ 0
-BUSY_2
 Wire Wire Line
 	8575 2300 9150 2300
 Wire Wire Line
@@ -1057,13 +1055,13 @@ $EndComp
 Connection ~ 8000 900 
 Wire Wire Line
 	8300 1200 8300 1550
-Text Label 8200 2200 1    50   ~ 0
+Text Label 8300 2200 1    50   ~ 0
 FLAG_1
 Wire Wire Line
 	8200 1950 8200 2200
 Wire Wire Line
 	8300 1950 8300 2200
-Text Label 8300 2200 1    50   ~ 0
+Text Label 8200 2200 1    50   ~ 0
 BUSY_1
 Wire Wire Line
 	8000 1950 8000 2200
@@ -1409,4 +1407,6 @@ F 3 "~" H 2125 4050 50  0001 C CNN
 	1    2125 4050
 	1    0    0    -1  
 $EndComp
+Text Label 8100 2200 1    50   ~ 0
+BUSY_2
 $EndSCHEMATC
