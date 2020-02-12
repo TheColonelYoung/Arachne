@@ -25,23 +25,7 @@ F 3 "" H 1700 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1450 1400 1550 1400
-Wire Wire Line
 	1700 1400 1700 1500
-$Comp
-L Connector:TestPoint TP802
-U 1 1 5CDB03CA
-P 1550 1450
-F 0 "TP802" H 1750 1600 50  0000 R CNN
-F 1 "GND" H 1750 1700 50  0000 R CNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 1750 1450 50  0001 C CNN
-F 3 "~" H 1750 1450 50  0001 C CNN
-	1    1550 1450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1550 1400 1700 1400
-Connection ~ 1550 1400
 $Comp
 L Device:Q_PMOS_GDS Q801
 U 1 1 5CDB36E0
@@ -108,8 +92,6 @@ F 3 "~" H 2900 1700 50  0001 C CNN
 	1    2700 1700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1550 1450 1550 1400
 $Comp
 L Regulator_Switching:L5973D U803
 U 1 1 5CE05CCA
@@ -1268,4 +1250,6 @@ Connection ~ 7125 975
 Wire Wire Line
 	6825 975  6825 1100
 Connection ~ 6825 975 
+Wire Wire Line
+	1450 1400 1700 1400
 $EndSCHEMATC
