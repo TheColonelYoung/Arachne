@@ -1,4 +1,4 @@
-16807088677925466
+16790462145774817
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -69383,76 +69383,6 @@ Logo WEEE
 0
 0
 0
-TCY_ESP8266
-ESP-01
-Module, ESP-8266, ESP-01, 8 pin
-Module ESP-8266 ESP8266
-0
-8
-8
-TCY_ESP8266
-ESP-03
-Module, ESP-8266, ESP-03, 14 pad, SMD
-Module ESP-8266 ESP8266
-0
-14
-14
-TCY_ESP8266
-ESP-06
-
-
-0
-20
-20
-TCY_ESP8266
-ESP-07v2
-Module, ESP-8266, ESP-07v2, 16 pad, SMD
-Module ESP-8266 ESP8266
-0
-16
-16
-TCY_ESP8266
-ESP-12
-Module, ESP-8266, ESP-12, 16 pad, SMD
-Module ESP-8266 ESP8266
-0
-16
-16
-TCY_ESP8266
-ESP-12E
-Module, ESP-8266, ESP-12, 16 pad, SMD
-Module ESP-8266 ESP8266
-0
-22
-22
-TCY_ESP8266
-ESP-12E_SMD
-Module, ESP-8266, ESP-12, 16 pad, SMD
-Module ESP-8266 ESP8266
-0
-22
-22
-TCY_ESP8266
-ESP-13-WROOM-02
-Module, ESP-8266, ESP-13-WROOM-02, 18 pad, SMD
-Module ESP-8266 ESP8266
-0
-19
-19
-TCY_ESP8266
-ESP-201
-Module, ESP-8266, ESP-201, 26 pin, through hole, 0.1 inch
-Module ESP-8266 ESP8266
-0
-26
-26
-TCY_ESP8266
-NodeMCU1.0(12-E)
-
-
-0
-30
-30
 TCY_IC
 ASMB-MTB0
 PLCC-4 Tricolor Black Surface LED
@@ -69698,13 +69628,6 @@ TCY_QR_19x19mm
 0
 0
 0
-TCY_mounting_holes
-Mounting_hole 3mm
-
-
-0
-1
-1
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf
