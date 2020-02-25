@@ -1264,40 +1264,32 @@ Wire Wire Line
 Wire Wire Line
 	4500 4475 5000 4475
 Wire Wire Line
-	5000 4375 4500 4375
-Wire Wire Line
-	4500 4275 5000 4275
+	4500 3975 5000 3975
 Wire Wire Line
 	5000 4175 4500 4175
 Wire Wire Line
-	4500 4075 5000 4075
-Wire Wire Line
-	5000 3975 4500 3975
-Text Label 4500 3975 0    50   ~ 0
+	4500 2475 5000 2475
+Text Label 6750 3675 2    50   ~ 0
 CS_1
-Text Label 4500 4075 0    50   ~ 0
+Text Label 4500 2475 0    50   ~ 0
 CS_2
 Text Label 4500 4175 0    50   ~ 0
 CS_3
-Text Label 4500 4275 0    50   ~ 0
+Text Label 4500 3975 0    50   ~ 0
 CS_4
-Text Label 4500 4375 0    50   ~ 0
+Text Label 6750 4275 2    50   ~ 0
 CS_5
 Text Label 4500 4475 0    50   ~ 0
 CS_6
 Wire Wire Line
-	4500 3575 5000 3575
+	4500 3775 5000 3775
 Wire Wire Line
-	5000 3475 4500 3475
+	5000 4075 4500 4075
+Wire Wire Line
+	4500 2875 5000 2875
 Wire Wire Line
 	4500 3375 5000 3375
-Wire Wire Line
-	5000 3275 4500 3275
-Wire Wire Line
-	4500 3875 5000 3875
-Wire Wire Line
-	5000 3775 4500 3775
-Text Label 4500 3275 0    50   ~ 0
+Text Label 6750 3375 2    50   ~ 0
 FLAG_1
 Text Label 8575 1750 0    50   ~ 0
 FLAG_2
@@ -1307,15 +1299,15 @@ Wire Wire Line
 	8575 1850 9150 1850
 Wire Wire Line
 	8575 1750 9150 1750
-Text Label 4500 3375 0    50   ~ 0
+Text Label 4500 2875 0    50   ~ 0
 FLAG_2
-Text Label 4500 3475 0    50   ~ 0
+Text Label 4500 4075 0    50   ~ 0
 FLAG_3
-Text Label 4500 3575 0    50   ~ 0
-FLAG_4
 Text Label 4500 3775 0    50   ~ 0
+FLAG_4
+Text Label 6750 4075 2    50   ~ 0
 FLAG_5
-Text Label 4500 3875 0    50   ~ 0
+Text Label 4500 3375 0    50   ~ 0
 FLAG_6
 Text Notes 9700 1175 0    118  ~ 24
 Motor 1
@@ -1336,33 +1328,23 @@ Interface
 Wire Wire Line
 	5000 2675 4500 2675
 Wire Wire Line
-	4500 2575 5000 2575
-Wire Wire Line
-	5000 2475 4500 2475
-Wire Wire Line
 	4500 2975 5000 2975
 Wire Wire Line
-	5000 2875 4500 2875
+	5000 2575 4500 2575
 Wire Wire Line
-	6200 3675 6750 3675
-Text Label 4500 2475 0    50   ~ 0
-BUSY_1
+	5000 3875 4500 3875
 Text Label 4500 2575 0    50   ~ 0
+BUSY_1
+Text Label 4500 2975 0    50   ~ 0
 BUSY_2
 Text Label 4500 2675 0    50   ~ 0
 BUSY_3
-Text Label 4500 2875 0    50   ~ 0
+Text Label 4500 3875 0    50   ~ 0
 BUSY_4
-Text Label 4500 2975 0    50   ~ 0
+Text Label 6750 4175 2    50   ~ 0
 BUSY_5
-Text Label 6750 3675 2    50   ~ 0
+Text Label 4500 3475 0    50   ~ 0
 BUSY_6
-NoConn ~ 6200 3375
-NoConn ~ 6200 3975
-NoConn ~ 6200 4075
-NoConn ~ 6200 4175
-NoConn ~ 6200 4275
-NoConn ~ 6200 4775
 Wire Wire Line
 	9050 6000 9050 6400
 Connection ~ 9050 6000
@@ -1457,4 +1439,16 @@ Wire Wire Line
 	3550 7025 4050 7025
 Text Notes 4250 6150 0    99   ~ 20
 Debug\n
+Wire Wire Line
+	6200 3675 6750 3675
+Wire Wire Line
+	6200 3375 6750 3375
+Wire Wire Line
+	4500 3475 5000 3475
+Wire Wire Line
+	6200 4075 6750 4075
+Wire Wire Line
+	6200 4175 6750 4175
+Wire Wire Line
+	6200 4275 6750 4275
 $EndSCHEMATC
