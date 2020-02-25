@@ -80,9 +80,9 @@ void Error_Handler(void);
 #define PWM_MON_GPIO_Port GPIOA
 #define I_MON_Pin GPIO_PIN_6
 #define I_MON_GPIO_Port GPIOA
-#define FLAG_6_Pin GPIO_PIN_10
+#define FLAG_6_Pin GPIO_PIN_1
 #define FLAG_6_GPIO_Port GPIOB
-#define BUSY_6_Pin GPIO_PIN_11
+#define BUSY_6_Pin GPIO_PIN_2
 #define BUSY_6_GPIO_Port GPIOB
 #define CS_6_Pin GPIO_PIN_12
 #define CS_6_GPIO_Port GPIOB
