@@ -1,4 +1,4 @@
-16790462145774817
+16799931371212995
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -69405,6 +69405,13 @@ DRV8825
 16
 16
 TCY_IC
+QFP-28_4x4_Pitch0.5mm
+
+
+0
+28
+28
+TCY_IC
 SI1145
 
 
@@ -69467,6 +69474,13 @@ SMD LED, 0603
 0
 2
 2
+TCY_connectors
+PVA-Button
+
+
+0
+4
+4
 TCY_connectors
 SWD_Clip
 
@@ -69628,6 +69642,34 @@ TCY_QR_19x19mm
 0
 0
 0
+TCY_smd_leds
+LED_5060_PLCC6_5.0x5.0mm_P1.6mm
+https://datasheet.octopart.com/OSW4XAT3C1E-OptoSupply-datasheet-26747005.pdf
+LED RGB NeoPixel
+0
+7
+3
+TCY_smd_leds
+LED_RGB_4x4_P1.32-PLCC-6
+https://www.tme.eu/Document/5631ce917101b4390c33b1e54414cb50/PP6N-3LFE.pdf
+RGB LED PLCC-6 4x4mm
+0
+7
+7
+TCY_smd_leds
+LED_RGB_1210_CA
+RGB LED 3.2x2.7mm http://www.avagotech.com/docs/AV02-0610EN
+LED 3227
+0
+4
+4
+TCY_smd_leds
+LED_UV_3.5x3.5
+LED Cree-XQ http://www.cree.com/~/media/Files/Cree/LED-Components-and-Modules/XLamp/Data-and-Binning/ds-XQB.pdf
+LED Cree XQ
+0
+3
+3
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf
