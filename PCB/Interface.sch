@@ -371,9 +371,9 @@ Wire Wire Line
 	7875 2550 8150 2550
 Wire Wire Line
 	7875 2450 8150 2450
-Text HLabel 8150 2450 2    79   Input ~ 0
-DBG_RX
 Text HLabel 8150 2550 2    79   Input ~ 0
+DBG_RX
+Text HLabel 8150 2450 2    79   Input ~ 0
 DBG_TX
 Text Notes 7000 1650 0    79   ~ 0
 LED signalization
@@ -399,5 +399,5 @@ D+
 Text Label 3575 2900 0    50   ~ 0
 D-
 Text Notes 6375 2625 0    79   ~ 0
-POWER\nSTAT\nDBG_RX\nDBG_TX
+POWER\nSTAT\nDBG_TX\nDBG_RX
 $EndSCHEMATC
