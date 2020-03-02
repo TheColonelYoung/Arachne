@@ -1,7 +1,7 @@
 # Project Arachne  
 Mainly 3D printed manipulator with 6 axis of freedom based on design of steward platform  
 
-![](Arachne.png)
+![](img/Arachne.png)
 
 **!!! Now the notes in this repository are rather assumptions that will need to be verified in practice !!!**  
 
@@ -95,7 +95,9 @@ Joints consists of 3 parts. Two forks and one central block. X and Y axis of for
 
 # **PCB**  
 Main Motherboard contains six stepper motor drivers L6470 in TSSOP28 package.  
-PCB is designed with maximal dimensions of 10x10cm, so it can be cheaply manufactured.  
+PCB is designed with maximal dimensions of 10x7cm, so it can be cheaply manufactured.  
+
+![](img/Arachne_motherboard.png)
 
 ### Specifications  
 - maximal input voltage is 36V  
