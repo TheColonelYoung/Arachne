@@ -1,7 +1,7 @@
 # Project Arachne  
 Mainly 3D printed manipulator with 6 axis of freedom based on design of steward platform  
 
-![](img/Arachne.png)
+![](img/Arachne.png)  
 
 **!!! Now the notes in this repository are rather assumptions that will need to be verified in practice !!!**  
 
@@ -97,10 +97,17 @@ Joints consists of 3 parts. Two forks and one central block. X and Y axis of for
 Main Motherboard contains six stepper motor drivers L6470 in TSSOP28 package.  
 PCB is designed with maximal dimensions of 10x7cm, so it can be cheaply manufactured.  
 
-![](img/Arachne_motherboard.png)
+![](img/Arachne_motherboard.png)  
 
 ### Specifications  
-- maximal input voltage is 36V  
+- Maximal input voltage is 36V  
 - PCB is designed for maximal current of 8A into motor, this assumes 6x1.2A stepper motors  
-- No endstops are required, MCU use stepper motor stall detection  
-- Stepper drivers are in line, so heatsink can be fit on them  
+- Input stage contains current sensor for monitoring of actual current  
+- Stepper motor end position can be detected via driver build-in stall detection or through endstop (one per each stepper)  
+    - Endstop should be Normally Open and connect ground to sense pin  
+    - Connector contains 3.3V power output for powering some position sensor instead of tactile switch between sense and ground  
+- Stepper drivers are in line, so heatsinks can be fit on them  
+- Via EXT IDC connector can be connected sensor for motion feedback over SPI or I2C  
+- DEBUG connector pinout is compatible with 10-pin IDC Saleae layout  
+- Minimal width trace is 5.1 mils (0.13 mm)  
+- Minimal drill size id 0.3mm  
