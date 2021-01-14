@@ -1,0 +1,666 @@
+ARM GAS  /tmp/ccx3gOn9.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"TIM_channel.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text._ZN11TIM_channelC2EP5Timerm,"ax",%progbits
+  18              		.align	1
+  19              		.global	_ZN11TIM_channelC2EP5Timerm
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	_ZN11TIM_channelC2EP5Timerm:
+  27              	.LVL0:
+  28              	.LFB2024:
+  29              		.file 1 "alohal/timer/TIM_channel.cpp"
+   1:alohal/timer/TIM_channel.cpp **** #include "TIM_channel.hpp"
+   2:alohal/timer/TIM_channel.cpp **** 
+   3:alohal/timer/TIM_channel.cpp **** #include "timer/timer.hpp"
+   4:alohal/timer/TIM_channel.cpp **** 
+   5:alohal/timer/TIM_channel.cpp **** TIM_channel::TIM_channel(Timer *parent, uint32_t address)
+  30              		.loc 1 5 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB10:
+   6:alohal/timer/TIM_channel.cpp ****     : _address(address), _parent_timer(parent) { }
+  36              		.loc 1 6 46 is_stmt 0 view .LVU1
+  37 0000 4260     		str	r2, [r0, #4]
+  38 0002 8160     		str	r1, [r0, #8]
+  39              	.LBE10:
+  40              		.loc 1 6 50 view .LVU2
+  41 0004 7047     		bx	lr
+  42              		.cfi_endproc
+  43              	.LFE2024:
+  45              		.global	_ZN11TIM_channelC1EP5Timerm
+  46              		.thumb_set _ZN11TIM_channelC1EP5Timerm,_ZN11TIM_channelC2EP5Timerm
+  47              		.section	.text._ZN11TIM_channel8Set_modeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE,"ax"
+  48              		.align	1
+  49              		.global	_ZN11TIM_channel8Set_modeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  53              		.fpu fpv4-sp-d16
+ARM GAS  /tmp/ccx3gOn9.s 			page 2
+
+
+  55              	_ZN11TIM_channel8Set_modeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
+  56              	.LVL1:
+  57              	.LFB2026:
+   7:alohal/timer/TIM_channel.cpp **** 
+   8:alohal/timer/TIM_channel.cpp **** int TIM_channel::Set_mode(string mode){
+  58              		.loc 1 8 39 is_stmt 1 view -0
+  59              		.cfi_startproc
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 0, uses_anonymous_args = 0
+  62              		@ link register save eliminated.
+   9:alohal/timer/TIM_channel.cpp ****     return 0; // TODO Timer modes
+  63              		.loc 1 9 5 view .LVU4
+  10:alohal/timer/TIM_channel.cpp **** }
+  64              		.loc 1 10 1 is_stmt 0 view .LVU5
+  65 0000 0020     		movs	r0, #0
+  66              	.LVL2:
+  67              		.loc 1 10 1 view .LVU6
+  68 0002 7047     		bx	lr
+  69              		.cfi_endproc
+  70              	.LFE2026:
+  72              		.section	.text._ZN11TIM_channel12PWM_GenerateEf,"ax",%progbits
+  73              		.align	1
+  74              		.global	_ZN11TIM_channel12PWM_GenerateEf
+  75              		.syntax unified
+  76              		.thumb
+  77              		.thumb_func
+  78              		.fpu fpv4-sp-d16
+  80              	_ZN11TIM_channel12PWM_GenerateEf:
+  81              	.LVL3:
+  82              	.LFB2027:
+  11:alohal/timer/TIM_channel.cpp **** 
+  12:alohal/timer/TIM_channel.cpp **** int TIM_channel::PWM_Generate(float percentage){
+  83              		.loc 1 12 48 is_stmt 1 view -0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 32
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87              		.loc 1 12 48 is_stmt 0 view .LVU8
+  88 0000 00B5     		push	{lr}
+  89              	.LCFI0:
+  90              		.cfi_def_cfa_offset 4
+  91              		.cfi_offset 14, -4
+  92 0002 2DED028B 		vpush.64	{d8}
+  93              	.LCFI1:
+  94              		.cfi_def_cfa_offset 12
+  95              		.cfi_offset 80, -12
+  96              		.cfi_offset 81, -8
+  97 0006 89B0     		sub	sp, sp, #36
+  98              	.LCFI2:
+  99              		.cfi_def_cfa_offset 48
+  13:alohal/timer/TIM_channel.cpp ****     if (percentage > 100) {
+ 100              		.loc 1 13 5 is_stmt 1 view .LVU9
+ 101 0008 DFED177A 		vldr.32	s15, .L7
+ 102 000c B4EEE70A 		vcmpe.f32	s0, s15
+ 103 0010 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 104 0014 25DC     		bgt	.L5
+ 105 0016 0346     		mov	r3, r0
+ 106 0018 B0EE408A 		vmov.f32	s16, s0
+ARM GAS  /tmp/ccx3gOn9.s 			page 3
+
+
+  14:alohal/timer/TIM_channel.cpp ****         return -1;
+  15:alohal/timer/TIM_channel.cpp ****     }
+  16:alohal/timer/TIM_channel.cpp **** 
+  17:alohal/timer/TIM_channel.cpp ****     TIM_OC_InitTypeDef sConfigOC;
+ 107              		.loc 1 17 5 view .LVU10
+  18:alohal/timer/TIM_channel.cpp ****     sConfigOC.Pulse =  _parent_timer->Handler()->Instance->ARR * (percentage / 100);
+ 108              		.loc 1 18 5 view .LVU11
+ 109              		.loc 1 18 24 is_stmt 0 view .LVU12
+ 110 001c 8268     		ldr	r2, [r0, #8]
+ 111              	.LVL4:
+ 112              	.LBB11:
+ 113              	.LBI11:
+ 114              		.file 2 "alohal/timer/timer.hpp"
+   1:alohal/timer/timer.hpp **** /**
+   2:alohal/timer/timer.hpp ****  * @file timer.hpp
+   3:alohal/timer/timer.hpp ****  * @author Petr Malaník (TheColonelYoung(at)gmail(dot)com)
+   4:alohal/timer/timer.hpp ****  * @version 0.2
+   5:alohal/timer/timer.hpp ****  * @date 01.04.2020
+   6:alohal/timer/timer.hpp ****  */
+   7:alohal/timer/timer.hpp **** #pragma once
+   8:alohal/timer/timer.hpp **** 
+   9:alohal/timer/timer.hpp **** #include "global_includes.hpp"
+  10:alohal/timer/timer.hpp **** #include "globals.hpp"
+  11:alohal/timer/timer.hpp **** #include "timer/TIM_channel.hpp"
+  12:alohal/timer/timer.hpp **** #include "irq/irq_handler.hpp"
+  13:alohal/timer/timer.hpp **** 
+  14:alohal/timer/timer.hpp **** /**
+  15:alohal/timer/timer.hpp ****  * @brief   Timer have specified modes in which can be used. This modes are defined more by an usag
+  16:alohal/timer/timer.hpp ****  *              structure of inner hardware.
+  17:alohal/timer/timer.hpp ****  *
+  18:alohal/timer/timer.hpp ****  *          Counter for IRQ count from zero (or any other value in CNT-Counter register to value of
+  19:alohal/timer/timer.hpp ****  *               ARR-Auto reload register)
+  20:alohal/timer/timer.hpp ****  *          When ARRpreload is enabled, new value to ARR is written after IRq happens
+  21:alohal/timer/timer.hpp ****  *          Frequency of timer input is initialized only once at mcu start-up
+  22:alohal/timer/timer.hpp ****  *
+  23:alohal/timer/timer.hpp ****  *                CHANNELS
+  24:alohal/timer/timer.hpp ****  * TIM_CHANNEL_1                      0x00000000U
+  25:alohal/timer/timer.hpp ****  * TIM_CHANNEL_2                      0x00000004U
+  26:alohal/timer/timer.hpp ****  * TIM_CHANNEL_3                      0x00000008U
+  27:alohal/timer/timer.hpp ****  * TIM_CHANNEL_4                      0x0000000CU
+  28:alohal/timer/timer.hpp ****  * TIM_CHANNEL_ALL                    0x00000018U
+  29:alohal/timer/timer.hpp ****  */
+  30:alohal/timer/timer.hpp **** 
+  31:alohal/timer/timer.hpp **** class Timer {
+  32:alohal/timer/timer.hpp **** public:
+  33:alohal/timer/timer.hpp ****     friend TIM_channel;
+  34:alohal/timer/timer.hpp **** 
+  35:alohal/timer/timer.hpp ****     /**
+  36:alohal/timer/timer.hpp ****      * @brief   IRQ handler for timer
+  37:alohal/timer/timer.hpp ****      */
+  38:alohal/timer/timer.hpp ****     IRQ_handler *IRQ = new IRQ_handler();
+  39:alohal/timer/timer.hpp **** 
+  40:alohal/timer/timer.hpp ****     /**
+  41:alohal/timer/timer.hpp ****      * @brief   Channel of timer
+  42:alohal/timer/timer.hpp ****      */
+  43:alohal/timer/timer.hpp ****     vector<TIM_channel> channel;
+  44:alohal/timer/timer.hpp **** 
+ARM GAS  /tmp/ccx3gOn9.s 			page 4
+
+
+  45:alohal/timer/timer.hpp ****     /**
+  46:alohal/timer/timer.hpp ****      * @brief Modes in which timer can work
+  47:alohal/timer/timer.hpp ****      *
+  48:alohal/timer/timer.hpp ****      *  Timer       - measuring of time
+  49:alohal/timer/timer.hpp ****      *  Timer_IRQ   - set time to next IRQ event
+  50:alohal/timer/timer.hpp ****      *  Counter     - counting of external inputs
+  51:alohal/timer/timer.hpp ****      */
+  52:alohal/timer/timer.hpp ****     enum class Modes {
+  53:alohal/timer/timer.hpp ****         Timer,
+  54:alohal/timer/timer.hpp ****         Timer_IRQ,
+  55:alohal/timer/timer.hpp ****         Counter
+  56:alohal/timer/timer.hpp ****     };
+  57:alohal/timer/timer.hpp **** 
+  58:alohal/timer/timer.hpp **** private:
+  59:alohal/timer/timer.hpp ****     /**
+  60:alohal/timer/timer.hpp ****      * @brief   Actual mode of timer
+  61:alohal/timer/timer.hpp ****      */
+  62:alohal/timer/timer.hpp ****     Modes mode = Modes::Timer;
+  63:alohal/timer/timer.hpp **** 
+  64:alohal/timer/timer.hpp ****     /**
+  65:alohal/timer/timer.hpp ****      * @brief Size of timer counter in bits
+  66:alohal/timer/timer.hpp ****      */
+  67:alohal/timer/timer.hpp ****     uint8_t size;
+  68:alohal/timer/timer.hpp **** 
+  69:alohal/timer/timer.hpp ****     /**
+  70:alohal/timer/timer.hpp ****      * @brief Flag if timer should optimize prescaler during every change of time period
+  71:alohal/timer/timer.hpp ****      *
+  72:alohal/timer/timer.hpp ****      */
+  73:alohal/timer/timer.hpp ****     bool optimize = false;
+  74:alohal/timer/timer.hpp **** 
+  75:alohal/timer/timer.hpp ****     /**
+  76:alohal/timer/timer.hpp ****      * @brief Frequency of timer clock input
+  77:alohal/timer/timer.hpp ****      */
+  78:alohal/timer/timer.hpp ****     uint frequency;
+  79:alohal/timer/timer.hpp **** 
+  80:alohal/timer/timer.hpp ****     /**
+  81:alohal/timer/timer.hpp ****      * @brief   Timer of ticks (timer input) per usecond
+  82:alohal/timer/timer.hpp ****      *          Initialized only at startup as frequency
+  83:alohal/timer/timer.hpp ****      */
+  84:alohal/timer/timer.hpp ****     float uticks;
+  85:alohal/timer/timer.hpp **** 
+  86:alohal/timer/timer.hpp ****     /**
+  87:alohal/timer/timer.hpp ****      * @brief Handle to HAl timer structure of timer
+  88:alohal/timer/timer.hpp ****      */
+  89:alohal/timer/timer.hpp ****     TIM_HandleTypeDef *handler;
+  90:alohal/timer/timer.hpp **** 
+  91:alohal/timer/timer.hpp **** public:
+  92:alohal/timer/timer.hpp ****     /**
+  93:alohal/timer/timer.hpp ****      * @brief   Construct a new Timer object
+  94:alohal/timer/timer.hpp ****      *          Initialize value of frequency and uticks from clock source frequency
+  95:alohal/timer/timer.hpp ****      *
+  96:alohal/timer/timer.hpp ****      * @param handler   Handle to HAl timer structure of timer
+  97:alohal/timer/timer.hpp ****      */
+  98:alohal/timer/timer.hpp ****     Timer(TIM_HandleTypeDef *handler);
+  99:alohal/timer/timer.hpp **** 
+ 100:alohal/timer/timer.hpp ****     /**
+ 101:alohal/timer/timer.hpp ****      * @brief   Construct a new Timer object
+ARM GAS  /tmp/ccx3gOn9.s 			page 5
+
+
+ 102:alohal/timer/timer.hpp ****      *          Initialize timer with channels then call rest of initialization
+ 103:alohal/timer/timer.hpp ****      *
+ 104:alohal/timer/timer.hpp ****      * @param handler       Handle to HAl timer structure of timer
+ 105:alohal/timer/timer.hpp ****      * @param size          Size if counter register
+ 106:alohal/timer/timer.hpp ****      * @param channels      Number of timer channels
+ 107:alohal/timer/timer.hpp ****      */
+ 108:alohal/timer/timer.hpp ****     Timer(TIM_HandleTypeDef *handler, int size, int channels);
+ 109:alohal/timer/timer.hpp **** 
+ 110:alohal/timer/timer.hpp ****     /*  Function below are separated into section based on usability in different modes
+ 111:alohal/timer/timer.hpp ****         Function have effect only if are used in their mode, otherwise do nothing
+ 112:alohal/timer/timer.hpp ****     */
+ 113:alohal/timer/timer.hpp **** 
+ 114:alohal/timer/timer.hpp ****     /*  ALL MODES */
+ 115:alohal/timer/timer.hpp **** 
+ 116:alohal/timer/timer.hpp ****     /**
+ 117:alohal/timer/timer.hpp ****      * @brief           Set mode of timer
+ 118:alohal/timer/timer.hpp ****      *
+ 119:alohal/timer/timer.hpp ****      * @param mode      New mode of timer
+ 120:alohal/timer/timer.hpp ****      */
+ 121:alohal/timer/timer.hpp ****     inline void Mode(Modes mode) {this->mode = mode;};
+ 122:alohal/timer/timer.hpp **** 
+ 123:alohal/timer/timer.hpp ****     /**
+ 124:alohal/timer/timer.hpp ****      * @brief           Return actual mode of timer
+ 125:alohal/timer/timer.hpp ****      *
+ 126:alohal/timer/timer.hpp ****      * @return Modes    Actual mode of timer
+ 127:alohal/timer/timer.hpp ****      */
+ 128:alohal/timer/timer.hpp ****     inline Modes Mode(){ return mode; };
+ 129:alohal/timer/timer.hpp **** 
+ 130:alohal/timer/timer.hpp ****     /* Function below manipulates with register of timer, probably should be private, will be? */
+ 131:alohal/timer/timer.hpp **** 
+ 132:alohal/timer/timer.hpp ****     /**
+ 133:alohal/timer/timer.hpp ****      * @brief           Set counter of timer to given value
+ 134:alohal/timer/timer.hpp ****      *
+ 135:alohal/timer/timer.hpp ****      * @param counter   New value for counter
+ 136:alohal/timer/timer.hpp ****      */
+ 137:alohal/timer/timer.hpp ****     inline void Counter(uint32_t counter){ handler->Instance->CNT = counter; };
+ 138:alohal/timer/timer.hpp **** 
+ 139:alohal/timer/timer.hpp ****     /**
+ 140:alohal/timer/timer.hpp ****      * @brief           Return actual value of counter
+ 141:alohal/timer/timer.hpp ****      *
+ 142:alohal/timer/timer.hpp ****      * @return uint32_t Counter register value
+ 143:alohal/timer/timer.hpp ****      */
+ 144:alohal/timer/timer.hpp ****     inline uint32_t Counter(){ return handler->Instance->CNT; };
+ 145:alohal/timer/timer.hpp **** 
+ 146:alohal/timer/timer.hpp ****     /**
+ 147:alohal/timer/timer.hpp ****      * @brief           Set prescaler of timer to given value
+ 148:alohal/timer/timer.hpp ****      *
+ 149:alohal/timer/timer.hpp ****      * @param prescaler New value for prescaler
+ 150:alohal/timer/timer.hpp ****      */
+ 151:alohal/timer/timer.hpp ****     inline void Prescaler(std::uint16_t prescaler){ handler->Instance->PSC = prescaler; };
+ 152:alohal/timer/timer.hpp **** 
+ 153:alohal/timer/timer.hpp ****     /**
+ 154:alohal/timer/timer.hpp ****      * @brief           Return actual value of prescaler
+ 155:alohal/timer/timer.hpp ****      *
+ 156:alohal/timer/timer.hpp ****      * @return uint16_t Prescaler register value
+ 157:alohal/timer/timer.hpp ****      */
+ 158:alohal/timer/timer.hpp ****     inline std::uint16_t Prescaler() const { return handler->Instance->PSC; };
+ARM GAS  /tmp/ccx3gOn9.s 			page 6
+
+
+ 159:alohal/timer/timer.hpp **** 
+ 160:alohal/timer/timer.hpp ****     /**
+ 161:alohal/timer/timer.hpp ****      * @brief               Set autoreload of timer to given value
+ 162:alohal/timer/timer.hpp ****      *
+ 163:alohal/timer/timer.hpp ****      * @param autoreload    New value for autoreload
+ 164:alohal/timer/timer.hpp ****      */
+ 165:alohal/timer/timer.hpp ****     inline void Autoreload(uint32_t autoreload){ handler->Instance->ARR = autoreload; };
+ 166:alohal/timer/timer.hpp **** 
+ 167:alohal/timer/timer.hpp ****     /**
+ 168:alohal/timer/timer.hpp ****      * @brief           Return actual value of autoreload
+ 169:alohal/timer/timer.hpp ****      *
+ 170:alohal/timer/timer.hpp ****      * @return uint32_t Autoreload register value
+ 171:alohal/timer/timer.hpp ****      */
+ 172:alohal/timer/timer.hpp ****     inline uint32_t Autoreload() const { return handler->Instance->ARR; };
+ 173:alohal/timer/timer.hpp **** 
+ 174:alohal/timer/timer.hpp ****     /**
+ 175:alohal/timer/timer.hpp ****      * @brief       Set global optimize flag for timer
+ 176:alohal/timer/timer.hpp ****      *              When true, during every change of timer period prescaler will be optimized to b
+ 177:alohal/timer/timer.hpp ****      *              Can be override by local flag when setting time
+ 178:alohal/timer/timer.hpp ****      *
+ 179:alohal/timer/timer.hpp ****      * @param flag  New state of optimize flag
+ 180:alohal/timer/timer.hpp ****      */
+ 181:alohal/timer/timer.hpp ****     inline void Optimize(bool flag){ optimize = flag; };
+ 182:alohal/timer/timer.hpp **** 
+ 183:alohal/timer/timer.hpp ****     /**
+ 184:alohal/timer/timer.hpp ****      * @brief           Return optimizer flag
+ 185:alohal/timer/timer.hpp ****      *
+ 186:alohal/timer/timer.hpp ****      * @return true     Timer is globally optimizing prescaller for every new period
+ 187:alohal/timer/timer.hpp ****      * @return false    Timer is not globally optimizing prescaller for every new period
+ 188:alohal/timer/timer.hpp ****      */
+ 189:alohal/timer/timer.hpp ****     inline bool Optimize() const { return optimize; };
+ 190:alohal/timer/timer.hpp **** 
+ 191:alohal/timer/timer.hpp ****     /**
+ 192:alohal/timer/timer.hpp ****      * @brief   Set time after which IRQ will activated
+ 193:alohal/timer/timer.hpp ****      *          Repeated periodically until stopped
+ 194:alohal/timer/timer.hpp ****      *
+ 195:alohal/timer/timer.hpp ****      * @param useconds  Time to next IRQ
+ 196:alohal/timer/timer.hpp ****      * @param optimize  Local flag for prescaler optimization
+ 197:alohal/timer/timer.hpp ****      */
+ 198:alohal/timer/timer.hpp ****     void Time_set(float useconds, bool optimize = false);
+ 199:alohal/timer/timer.hpp **** 
+ 200:alohal/timer/timer.hpp ****     /**
+ 201:alohal/timer/timer.hpp ****      * @brief   Set frequency in which timer will execute IRQ
+ 202:alohal/timer/timer.hpp ****      *
+ 203:alohal/timer/timer.hpp ****      * @param frequency Frequency in Hz
+ 204:alohal/timer/timer.hpp ****      */
+ 205:alohal/timer/timer.hpp ****     void Frequency_set(float frequency);
+ 206:alohal/timer/timer.hpp **** 
+ 207:alohal/timer/timer.hpp ****     /**
+ 208:alohal/timer/timer.hpp ****      * @brief   Enable input for counter, clock input or external input
+ 209:alohal/timer/timer.hpp ****      */
+ 210:alohal/timer/timer.hpp ****     void Start();
+ 211:alohal/timer/timer.hpp **** 
+ 212:alohal/timer/timer.hpp ****     /**
+ 213:alohal/timer/timer.hpp ****      * @brief   Disable input for counter, clock input or external input
+ 214:alohal/timer/timer.hpp ****      */
+ 215:alohal/timer/timer.hpp ****     void Stop();
+ARM GAS  /tmp/ccx3gOn9.s 			page 7
+
+
+ 216:alohal/timer/timer.hpp **** 
+ 217:alohal/timer/timer.hpp ****     /**
+ 218:alohal/timer/timer.hpp ****      * @brief       Size of timer counter
+ 219:alohal/timer/timer.hpp ****      *
+ 220:alohal/timer/timer.hpp ****      * @return uint8_t Number of bits of timer counter register, return only values: 16 or 32
+ 221:alohal/timer/timer.hpp ****      */
+ 222:alohal/timer/timer.hpp ****     inline uint8_t Size() const { return size; };
+ 223:alohal/timer/timer.hpp **** 
+ 224:alohal/timer/timer.hpp ****     /**
+ 225:alohal/timer/timer.hpp ****      * @brief   Number of channel of counter
+ 226:alohal/timer/timer.hpp ****      *
+ 227:alohal/timer/timer.hpp ****      * @return int  Number of channel of counter
+ 228:alohal/timer/timer.hpp ****      */
+ 229:alohal/timer/timer.hpp ****     inline int Channel_count() const { return channel.size(); }
+ 230:alohal/timer/timer.hpp **** 
+ 231:alohal/timer/timer.hpp ****     /**
+ 232:alohal/timer/timer.hpp ****      * @brief       Return frequency of clock source
+ 233:alohal/timer/timer.hpp ****      *
+ 234:alohal/timer/timer.hpp ****      * @return uint Frequency in Hz
+ 235:alohal/timer/timer.hpp ****      */
+ 236:alohal/timer/timer.hpp ****     inline uint Input_frequency() const { return frequency; };
+ 237:alohal/timer/timer.hpp **** 
+ 238:alohal/timer/timer.hpp **** private:
+ 239:alohal/timer/timer.hpp **** 
+ 240:alohal/timer/timer.hpp ****     /**
+ 241:alohal/timer/timer.hpp ****      * @brief   Return handler, used by friend TIM_channel for access to configuration structure of
+ 242:alohal/timer/timer.hpp ****      *
+ 243:alohal/timer/timer.hpp ****      * @return TIM_HandleTypeDef*   Pointer to configuration structure of HAL
+ 244:alohal/timer/timer.hpp ****      */
+ 245:alohal/timer/timer.hpp ****     inline TIM_HandleTypeDef *Handler() const {return handler;};
+ 115              		.loc 2 245 31 is_stmt 1 view .LVU13
+ 116              	.LBB12:
+ 117              		.loc 2 245 48 view .LVU14
+ 118              		.loc 2 245 55 is_stmt 0 view .LVU15
+ 119 001e 106A     		ldr	r0, [r2, #32]
+ 120              	.LVL5:
+ 121              		.loc 2 245 55 view .LVU16
+ 122              	.LBE12:
+ 123              	.LBE11:
+ 124              		.loc 1 18 50 view .LVU17
+ 125 0020 0268     		ldr	r2, [r0]
+ 126              		.loc 1 18 60 view .LVU18
+ 127 0022 D2ED0B7A 		vldr.32	s15, [r2, #44]	@ int
+ 128              		.loc 1 18 78 view .LVU19
+ 129 0026 DFED106A 		vldr.32	s13, .L7
+ 130 002a 80EE267A 		vdiv.f32	s14, s0, s13
+ 131              		.loc 1 18 64 view .LVU20
+ 132 002e F8EE677A 		vcvt.f32.u32	s15, s15
+ 133 0032 67EE877A 		vmul.f32	s15, s15, s14
+ 134              		.loc 1 18 21 view .LVU21
+ 135 0036 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 136 003a CDED027A 		vstr.32	s15, [sp, #8]	@ int
+  19:alohal/timer/TIM_channel.cpp ****     sConfigOC.OCMode     = TIM_OCMODE_PWM1;
+ 137              		.loc 1 19 5 is_stmt 1 view .LVU22
+ 138              		.loc 1 19 26 is_stmt 0 view .LVU23
+ 139 003e 6022     		movs	r2, #96
+ 140 0040 0192     		str	r2, [sp, #4]
+ARM GAS  /tmp/ccx3gOn9.s 			page 8
+
+
+  20:alohal/timer/TIM_channel.cpp ****     sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+ 141              		.loc 1 20 5 is_stmt 1 view .LVU24
+ 142              		.loc 1 20 26 is_stmt 0 view .LVU25
+ 143 0042 0022     		movs	r2, #0
+ 144 0044 0392     		str	r2, [sp, #12]
+  21:alohal/timer/TIM_channel.cpp ****     sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+ 145              		.loc 1 21 5 is_stmt 1 view .LVU26
+ 146              		.loc 1 21 26 is_stmt 0 view .LVU27
+ 147 0046 0592     		str	r2, [sp, #20]
+  22:alohal/timer/TIM_channel.cpp ****     HAL_TIM_PWM_ConfigChannel(_parent_timer->Handler(), &sConfigOC, _address);
+ 148              		.loc 1 22 5 is_stmt 1 view .LVU28
+ 149              	.LVL6:
+ 150              	.LBB13:
+ 151              	.LBI13:
+ 152              		.loc 2 245 31 view .LVU29
+ 153              	.LBB14:
+ 154              		.loc 2 245 48 view .LVU30
+ 155              		.loc 2 245 48 is_stmt 0 view .LVU31
+ 156              	.LBE14:
+ 157              	.LBE13:
+ 158              		.loc 1 22 30 view .LVU32
+ 159 0048 5A68     		ldr	r2, [r3, #4]
+ 160 004a 01A9     		add	r1, sp, #4
+ 161 004c FFF7FEFF 		bl	HAL_TIM_PWM_ConfigChannel
+ 162              	.LVL7:
+  23:alohal/timer/TIM_channel.cpp **** 
+  24:alohal/timer/TIM_channel.cpp ****     return static_cast<int>(percentage);
+ 163              		.loc 1 24 5 is_stmt 1 view .LVU33
+ 164              		.loc 1 24 39 is_stmt 0 view .LVU34
+ 165 0050 BDEEC88A 		vcvt.s32.f32	s16, s16
+ 166              	.LVL8:
+ 167              	.L3:
+  25:alohal/timer/TIM_channel.cpp **** }
+ 168              		.loc 1 25 1 view .LVU35
+ 169 0054 18EE100A 		vmov	r0, s16	@ int
+ 170 0058 09B0     		add	sp, sp, #36
+ 171              	.LCFI3:
+ 172              		.cfi_remember_state
+ 173              		.cfi_def_cfa_offset 12
+ 174              		@ sp needed
+ 175 005a BDEC028B 		vldm	sp!, {d8}
+ 176              	.LCFI4:
+ 177              		.cfi_restore 80
+ 178              		.cfi_restore 81
+ 179              		.cfi_def_cfa_offset 4
+ 180 005e 5DF804FB 		ldr	pc, [sp], #4
+ 181              	.LVL9:
+ 182              	.L5:
+ 183              	.LCFI5:
+ 184              		.cfi_restore_state
+  14:alohal/timer/TIM_channel.cpp ****     }
+ 185              		.loc 1 14 17 view .LVU36
+ 186 0062 9FED028A 		vldr.32	s16, .L7+4	@ int
+ 187 0066 F5E7     		b	.L3
+ 188              	.L8:
+ 189              		.align	2
+ 190              	.L7:
+ARM GAS  /tmp/ccx3gOn9.s 			page 9
+
+
+ 191 0068 0000C842 		.word	1120403456
+ 192 006c FFFFFFFF 		.word	-1
+ 193              		.cfi_endproc
+ 194              	.LFE2027:
+ 196              		.section	.text._ZN11TIM_channel9PWM_StartEv,"ax",%progbits
+ 197              		.align	1
+ 198              		.global	_ZN11TIM_channel9PWM_StartEv
+ 199              		.syntax unified
+ 200              		.thumb
+ 201              		.thumb_func
+ 202              		.fpu fpv4-sp-d16
+ 204              	_ZN11TIM_channel9PWM_StartEv:
+ 205              	.LVL10:
+ 206              	.LFB2028:
+  26:alohal/timer/TIM_channel.cpp **** 
+  27:alohal/timer/TIM_channel.cpp **** void TIM_channel::PWM_Start(){
+ 207              		.loc 1 27 30 is_stmt 1 view -0
+ 208              		.cfi_startproc
+ 209              		@ args = 0, pretend = 0, frame = 0
+ 210              		@ frame_needed = 0, uses_anonymous_args = 0
+ 211              		.loc 1 27 30 is_stmt 0 view .LVU38
+ 212 0000 08B5     		push	{r3, lr}
+ 213              	.LCFI6:
+ 214              		.cfi_def_cfa_offset 8
+ 215              		.cfi_offset 3, -8
+ 216              		.cfi_offset 14, -4
+  28:alohal/timer/TIM_channel.cpp ****     HAL_TIM_PWM_Start(_parent_timer->Handler(), _address);
+ 217              		.loc 1 28 5 is_stmt 1 view .LVU39
+ 218              		.loc 1 28 23 is_stmt 0 view .LVU40
+ 219 0002 8368     		ldr	r3, [r0, #8]
+ 220              	.LVL11:
+ 221              	.LBB15:
+ 222              	.LBI15:
+ 223              		.loc 2 245 31 is_stmt 1 view .LVU41
+ 224              	.LBB16:
+ 225              		.loc 2 245 48 view .LVU42
+ 226              		.loc 2 245 48 is_stmt 0 view .LVU43
+ 227              	.LBE16:
+ 228              	.LBE15:
+ 229              		.loc 1 28 22 view .LVU44
+ 230 0004 4168     		ldr	r1, [r0, #4]
+ 231 0006 186A     		ldr	r0, [r3, #32]
+ 232              	.LVL12:
+ 233              		.loc 1 28 22 view .LVU45
+ 234 0008 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 235              	.LVL13:
+  29:alohal/timer/TIM_channel.cpp **** }
+ 236              		.loc 1 29 1 view .LVU46
+ 237 000c 08BD     		pop	{r3, pc}
+ 238              		.cfi_endproc
+ 239              	.LFE2028:
+ 241              		.section	.text._ZN11TIM_channel8PWM_StopEv,"ax",%progbits
+ 242              		.align	1
+ 243              		.global	_ZN11TIM_channel8PWM_StopEv
+ 244              		.syntax unified
+ 245              		.thumb
+ 246              		.thumb_func
+ARM GAS  /tmp/ccx3gOn9.s 			page 10
+
+
+ 247              		.fpu fpv4-sp-d16
+ 249              	_ZN11TIM_channel8PWM_StopEv:
+ 250              	.LVL14:
+ 251              	.LFB2029:
+  30:alohal/timer/TIM_channel.cpp **** 
+  31:alohal/timer/TIM_channel.cpp **** void TIM_channel::PWM_Stop(){
+ 252              		.loc 1 31 29 is_stmt 1 view -0
+ 253              		.cfi_startproc
+ 254              		@ args = 0, pretend = 0, frame = 0
+ 255              		@ frame_needed = 0, uses_anonymous_args = 0
+ 256              		.loc 1 31 29 is_stmt 0 view .LVU48
+ 257 0000 08B5     		push	{r3, lr}
+ 258              	.LCFI7:
+ 259              		.cfi_def_cfa_offset 8
+ 260              		.cfi_offset 3, -8
+ 261              		.cfi_offset 14, -4
+  32:alohal/timer/TIM_channel.cpp ****     HAL_TIM_PWM_Stop(_parent_timer->Handler(), _address);
+ 262              		.loc 1 32 5 is_stmt 1 view .LVU49
+ 263              		.loc 1 32 22 is_stmt 0 view .LVU50
+ 264 0002 8368     		ldr	r3, [r0, #8]
+ 265              	.LVL15:
+ 266              	.LBB17:
+ 267              	.LBI17:
+ 268              		.loc 2 245 31 is_stmt 1 view .LVU51
+ 269              	.LBB18:
+ 270              		.loc 2 245 48 view .LVU52
+ 271              		.loc 2 245 48 is_stmt 0 view .LVU53
+ 272              	.LBE18:
+ 273              	.LBE17:
+ 274              		.loc 1 32 21 view .LVU54
+ 275 0004 4168     		ldr	r1, [r0, #4]
+ 276 0006 186A     		ldr	r0, [r3, #32]
+ 277              	.LVL16:
+ 278              		.loc 1 32 21 view .LVU55
+ 279 0008 FFF7FEFF 		bl	HAL_TIM_PWM_Stop
+ 280              	.LVL17:
+  33:alohal/timer/TIM_channel.cpp **** }
+ 281              		.loc 1 33 1 view .LVU56
+ 282 000c 08BD     		pop	{r3, pc}
+ 283              		.cfi_endproc
+ 284              	.LFE2029:
+ 286              		.text
+ 287              	.Letext0:
+ 288              		.file 3 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/machine/_default_types.h"
+ 289              		.file 4 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/sys/_stdint.h"
+ 290              		.file 5 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/stdint.h"
+ 291              		.file 6 "Drivers/CMSIS/Include/core_cm4.h"
+ 292              		.file 7 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
+ 293              		.file 8 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l452xx.h"
+ 294              		.file 9 "/opt/gcc-arm-none-eabi-9-2020-q2/lib/gcc/arm-none-eabi/9.3.1/include/stddef.h"
+ 295              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 296              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 297              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
+ 298              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
+ 299              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ 300              		.file 15 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/basic_string.h"
+ 301              		.file 16 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/type_traits"
+ARM GAS  /tmp/ccx3gOn9.s 			page 11
+
+
+ 302              		.file 17 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/arm-none-eabi/thumb/v7e
+ 303              		.file 18 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/stl_pair.h"
+ 304              		.file 19 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/debug/debug.h"
+ 305              		.file 20 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/exception_ptr.h"
+ 306              		.file 21 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/new"
+ 307              		.file 22 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/allocator.h"
+ 308              		.file 23 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/utility"
+ 309              		.file 24 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/cwchar"
+ 310              		.file 25 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/char_traits.h"
+ 311              		.file 26 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/cstdint"
+ 312              		.file 27 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/clocale"
+ 313              		.file 28 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/limits"
+ 314              		.file 29 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/string_view"
+ 315              		.file 30 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/cstdlib"
+ 316              		.file 31 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/cstdio"
+ 317              		.file 32 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/alloc_traits.h"
+ 318              		.file 33 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/initializer_list"
+ 319              		.file 34 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/stringfwd.h"
+ 320              		.file 35 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/stl_vector.h"
+ 321              		.file 36 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/vector.tcc"
+ 322              		.file 37 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/stl_iterator_base_
+ 323              		.file 38 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/predefined_ops.h"
+ 324              		.file 39 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/ext/new_allocator.h"
+ 325              		.file 40 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/ext/numeric_traits.h"
+ 326              		.file 41 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/ext/alloc_traits.h"
+ 327              		.file 42 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/c++/9.3.1/bits/stl_iterator.h"
+ 328              		.file 43 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/sys/_types.h"
+ 329              		.file 44 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/sys/reent.h"
+ 330              		.file 45 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/sys/lock.h"
+ 331              		.file 46 "/opt/gcc-arm-none-eabi-9-2020-q2/lib/gcc/arm-none-eabi/9.3.1/include/stdarg.h"
+ 332              		.file 47 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/wchar.h"
+ 333              		.file 48 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/locale.h"
+ 334              		.file 49 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/ctype.h"
+ 335              		.file 50 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/stdlib.h"
+ 336              		.file 51 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/stdio.h"
+ 337              		.file 52 "/opt/gcc-arm-none-eabi-9-2020-q2/arm-none-eabi/include/sys/errno.h"
+ 338              		.file 53 "alohal/timer/TIM_channel.hpp"
+ 339              		.file 54 "alohal/globals.hpp"
+ 340              		.file 55 "alohal/irq/irq_handler.hpp"
+ 341              		.file 56 "alohal/irq/irq_observer.hpp"
+ 342              		.file 57 "<built-in>"
+ARM GAS  /tmp/ccx3gOn9.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 TIM_channel.cpp
+     /tmp/ccx3gOn9.s:18     .text._ZN11TIM_channelC2EP5Timerm:0000000000000000 $t
+     /tmp/ccx3gOn9.s:26     .text._ZN11TIM_channelC2EP5Timerm:0000000000000000 _ZN11TIM_channelC2EP5Timerm
+     /tmp/ccx3gOn9.s:26     .text._ZN11TIM_channelC2EP5Timerm:0000000000000000 _ZN11TIM_channelC1EP5Timerm
+     /tmp/ccx3gOn9.s:48     .text._ZN11TIM_channel8Set_modeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $t
+     /tmp/ccx3gOn9.s:55     .text._ZN11TIM_channel8Set_modeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 _ZN11TIM_channel8Set_modeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+     /tmp/ccx3gOn9.s:73     .text._ZN11TIM_channel12PWM_GenerateEf:0000000000000000 $t
+     /tmp/ccx3gOn9.s:80     .text._ZN11TIM_channel12PWM_GenerateEf:0000000000000000 _ZN11TIM_channel12PWM_GenerateEf
+     /tmp/ccx3gOn9.s:191    .text._ZN11TIM_channel12PWM_GenerateEf:0000000000000068 $d
+     /tmp/ccx3gOn9.s:197    .text._ZN11TIM_channel9PWM_StartEv:0000000000000000 $t
+     /tmp/ccx3gOn9.s:204    .text._ZN11TIM_channel9PWM_StartEv:0000000000000000 _ZN11TIM_channel9PWM_StartEv
+     /tmp/ccx3gOn9.s:242    .text._ZN11TIM_channel8PWM_StopEv:0000000000000000 $t
+     /tmp/ccx3gOn9.s:249    .text._ZN11TIM_channel8PWM_StopEv:0000000000000000 _ZN11TIM_channel8PWM_StopEv
+
+UNDEFINED SYMBOLS
+HAL_TIM_PWM_ConfigChannel
+HAL_TIM_PWM_Start
+HAL_TIM_PWM_Stop
