@@ -29,7 +29,7 @@
 
 // #define TIM_1_EN
 #define TIM_2_EN
-// #define TIM_3_EN
+#define TIM_3_EN
 // #define TIM_4_EN
 // #define TIM_5_EN
 // #define TIM_6_EN
@@ -50,7 +50,7 @@
 //#define I2C_4_EN
 
 //#define SPI_1_EN
-//#define SPI_2_EN
+#define SPI_2_EN
 //#define SPI_3_EN
 //#define SPI_4_EN
 
