@@ -20,17 +20,23 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 #include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <functional>
+
 #include "gpio/pin.hpp"
 #include "device/device.hpp"
 #include "usbd_cdc_if.h"
 #include "misc/logger.hpp"
+#include "misc/invocation_wrapper.hpp"
 #include "tools/tasker.hpp"
 #include "led/WS2818B.hpp"
 #include "motor/L6470.hpp"
+#include "construction/motion_axis_L6470.hpp"
+#include "../app/eyrina.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -60,6 +66,13 @@ DMA_HandleTypeDef hdma_tim3_ch1_trig;
 
 UART_HandleTypeDef huart2;
 
+/* Definitions for Hearth_beat */
+osThreadId_t Hearth_beatHandle;
+const osThreadAttr_t Hearth_beat_attributes = {
+    .name       = "Hearth_beat",
+    .stack_size = 128 * 4,
+    .priority   = (osPriority_t) osPriorityLow,
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -74,6 +87,8 @@ static void MX_TIM3_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_TIM2_Init(void);
+void Hearth_beat_enter(void *argument);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -116,73 +131,73 @@ int main(void){
     MX_TIM3_Init();
     MX_USART2_UART_Init();
     MX_I2C2_Init();
-    MX_USB_DEVICE_Init();
     MX_TIM2_Init();
     /* USER CODE BEGIN 2 */
 
-    HAL_Delay(1);
+    /* USER CODE END 2 */
 
+    /* Init scheduler */
+    osKernelInitialize();
+
+    /* USER CODE BEGIN RTOS_MUTEX */
+    /* add mutexes, ... */
+    /* USER CODE END RTOS_MUTEX */
+
+    /* USER CODE BEGIN RTOS_SEMAPHORES */
+    /* add semaphores, ... */
+    /* USER CODE END RTOS_SEMAPHORES */
+
+    /* USER CODE BEGIN RTOS_TIMERS */
+    /* start timers, add new ones, ... */
+    /* USER CODE END RTOS_TIMERS */
+
+    /* USER CODE BEGIN RTOS_QUEUES */
+    /* add queues, ... */
+    /* USER CODE END RTOS_QUEUES */
+
+    /* Create the thread(s) */
+    /* creation of Hearth_beat */
+    Hearth_beatHandle = osThreadNew(Hearth_beat_enter, NULL, &Hearth_beat_attributes);
+
+    /* USER CODE BEGIN RTOS_THREADS */
     device()->Enable_CLI(device()->mcu->USB_port);
     device()->Enable_Filesystem();
     device()->cli->Enable_filesystem_executable(device()->fs);
+    device()->cli->Enable_history(5);
 
     Logger().Instance()->Add_log_channel(new Invocation_wrapper<UART, int, string>(device()->mcu->UART_2, &UART::Send));
-
-    Tasker *tasker = new Tasker(device()->mcu->TIM_2);
 
     Pin *Status_LED = new Pin('C', 15);
     Status_LED->Set(0);
 
-    tasker->New_event(50000, -1, Status_LED, &Pin::Toggle, 0, "LED_Toggle");
+    Tasker::Instance(device()->mcu->TIM_2);
+    Tasker::Instance()->New_event(50000, -1, Status_LED, &Pin::Toggle, 0, "LED_Toggle");
 
-    WS2818B *led = new WS2818B(device()->mcu->TIM_3, 0);
-    led->Color(0x08, 0x00, 0x00);
+    // WS2818B *led = new WS2818B(device()->mcu->TIM_3, 0);
+    // led->Color(0x08, 0x00, 0x00);
 
-    HAL_Delay(250);
+    // HAL_Delay(100);
 
-    SPI_master *motor_spi = device()->mcu->SPI_2;
+    Eyrina *eyrina = new Eyrina();
+    eyrina->Init();
+    device()->cli->Start_foreground_application("/apps/eyrina");
+    /* add threads, ... */
+    /* USER CODE END RTOS_THREADS */
 
-    vector<Pin> Chip_Select = { Pin('A', 4), Pin('H', 0), Pin('B', 9), Pin('B', 7), Pin('A', 10), Pin('B', 12) };
+    /* USER CODE BEGIN RTOS_EVENTS */
+    /* add events, ... */
+    /* USER CODE END RTOS_EVENTS */
 
-    L6470 *motor_1 = new L6470(*motor_spi, &Chip_Select[0]);
+    /* Start scheduler */
+    osKernelStart();
 
-    motor_1->Reset();
-    motor_1->Init();
-    motor_1->Autotune(24.0, 1.0, 4.2, 7.2, 0.068);
-    motor_1->Overcurrent(2000);
-    motor_1->Stall(600);
-
-    motor_1->Microsteps(128);
-    motor_1->Acceleration(500);
-    motor_1->Deceleration(500);
-    motor_1->Max_speed(1200);
-    motor_1->Min_speed(100);
-    motor_1->Full_step_optimization(0);
-
-    device()->mcu->UART_2->Send(motor_1->Status_formated());
-
-    motor_1->Run(Stepper_motor::Direction::Forward, 600);
-
-    HAL_Delay(3000);
-
-    device()->mcu->UART_2->Send(motor_1->Status_formated());
-
-    HAL_Delay(3000);
-
-    motor_1->Soft_HiZ();
-
-    /* USER CODE END 2 */
-
+    /* We should never get here as control is now taken by the scheduler */
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        led->Color(0x00, 0x00, 0x08);
-        HAL_Delay(20);
-        led->Color(0x00, 0x08, 0x00);
-        HAL_Delay(20);
     }
     /* USER CODE END 3 */
 } // main
@@ -511,7 +526,7 @@ static void MX_DMA_Init(void){
 
     /* DMA interrupt init */
     /* DMA1_Channel6_IRQn interrupt configuration */
-    HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
 }
 
@@ -569,15 +584,15 @@ static void MX_GPIO_Init(void){
 
     /*Configure GPIO pin : BUSY_1_Pin */
     GPIO_InitStruct.Pin  = BUSY_1_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(BUSY_1_GPIO_Port, &GPIO_InitStruct);
 
-    /*Configure GPIO pin : FLAG_1_Pin */
-    GPIO_InitStruct.Pin  = FLAG_1_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-    GPIO_InitStruct.Pull = GPIO_PULLUP;
-    HAL_GPIO_Init(FLAG_1_GPIO_Port, &GPIO_InitStruct);
+    /*Configure GPIO pins : FLAG_1_Pin FLAG_5_Pin BUSY_5_Pin */
+    GPIO_InitStruct.Pin  = FLAG_1_Pin | FLAG_5_Pin | BUSY_5_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
     /*Configure GPIO pins : CS_1_Pin CS_5_Pin */
     GPIO_InitStruct.Pin   = CS_1_Pin | CS_5_Pin;
@@ -615,12 +630,6 @@ static void MX_GPIO_Init(void){
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-    /*Configure GPIO pins : FLAG_5_Pin BUSY_5_Pin */
-    GPIO_InitStruct.Pin  = FLAG_5_Pin | BUSY_5_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
     /*Configure GPIO pin : BUSY_3_Pin */
     GPIO_InitStruct.Pin  = BUSY_3_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -628,13 +637,57 @@ static void MX_GPIO_Init(void){
     HAL_GPIO_Init(BUSY_3_GPIO_Port, &GPIO_InitStruct);
 
     /* EXTI interrupt init*/
-    HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(EXTI1_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(EXTI1_IRQn);
 } // MX_GPIO_Init
 
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_Hearth_beat_enter */
+
+/**
+  * @brief  Function implementing the Hearth_beat thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_Hearth_beat_enter */
+void Hearth_beat_enter(void *argument){
+    /* init code for USB_DEVICE */
+    MX_USB_DEVICE_Init();
+    /* USER CODE BEGIN 5 */
+    Pin *Status_LED = new Pin('C', 15);
+    Status_LED->Set(0);
+    /* Infinite loop */
+    for (;;) {
+        Status_LED->Set(1);
+        osDelay(100);
+        Status_LED->Set(0);
+        osDelay(100);
+    }
+    /* USER CODE END 5 */
+}
+
+/**
+ * @brief  Period elapsed callback in non blocking mode
+ * @note   This function is called  when TIM16 interrupt took place, inside
+ * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ * a global variable "uwTick" used as application time base.
+ * @param  htim : TIM handle
+ * @retval None
+ */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+    /* USER CODE BEGIN Callback 0 */
+
+    /* USER CODE END Callback 0 */
+    if (htim->Instance == TIM16) {
+        HAL_IncTick();
+    }
+    /* USER CODE BEGIN Callback 1 */
+
+    /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

@@ -27,6 +27,7 @@
 // #define UART_3_EN
 // #define UART_4_EN
 
+#define TIMER_USED_AS_TIMEBASE
 // #define TIM_1_EN
 #define TIM_2_EN
 #define TIM_3_EN
@@ -53,7 +54,6 @@
 #define SPI_2_EN
 //#define SPI_3_EN
 //#define SPI_4_EN
-
 
 // # define FLASH_EN
 

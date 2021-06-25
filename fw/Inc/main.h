@@ -70,11 +70,11 @@ void Error_Handler(void);
 #define CS_2_GPIO_Port GPIOH
 #define BUSY_1_Pin GPIO_PIN_1
 #define BUSY_1_GPIO_Port GPIOH
+#define BUSY_1_EXTI_IRQn EXTI1_IRQn
 #define _5V_MON_Pin GPIO_PIN_0
 #define _5V_MON_GPIO_Port GPIOA
 #define FLAG_1_Pin GPIO_PIN_1
 #define FLAG_1_GPIO_Port GPIOA
-#define FLAG_1_EXTI_IRQn EXTI1_IRQn
 #define CS_1_Pin GPIO_PIN_4
 #define CS_1_GPIO_Port GPIOA
 #define PWM_MON_Pin GPIO_PIN_5
